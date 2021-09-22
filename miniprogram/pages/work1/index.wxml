@@ -1,0 +1,4 @@
+<view class="sn">07200903陈健生</view>
+<navigator class="work1" url="/pages/work1/index">work1 任务列表</navigator>
+<navigator class="work2" url="/pages/work2/index">work2 惊喜不惊喜</navigator>
+<navigator class="work3" url="/pages/work3/index">work3 比大小</navigator>

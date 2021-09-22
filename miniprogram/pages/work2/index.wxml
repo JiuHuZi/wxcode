@@ -1,0 +1,1 @@
+<text bindtap='kkk'>{{msg}}</text>
