@@ -1,1 +1,4 @@
 /* miniprogram/pages/work3/index.wxss */
+input{
+  border: 1px solid #000;
+}

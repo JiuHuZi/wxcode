@@ -1,2 +1,8 @@
-<!--miniprogram/pages/work3/index.wxml-->
-<text>miniprogram/pages/work3/index.wxml</text>
+<form bindsubmit="submit">
+  <text>第一个数：</text>
+  <input type="number" class="num1" name='num1'></input>
+  <text>第二个数：</text>
+  <input type="number" class="num2" name='num2'></input>
+  <button form-type="submit" type="primary">提交</button>
+</form>
+<text>比较结果：{{result}}</text>
