@@ -1,0 +1,2 @@
+{{msg}}
+<view wx:for="{{list}}" wx:key="this">{{item.name}} : {{item.score.php}}</view>
