@@ -74,6 +74,13 @@
 					"pathName": "pages/test/test",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/work4p/index",
+					"pathName": "pages/work4p/index",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

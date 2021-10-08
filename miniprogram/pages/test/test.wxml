@@ -1,2 +1,2 @@
 {{msg}}
-<view wx:for="{{list}}" wx:key="this">{{item.name}} : {{item.score.php}}</view>
+<view wx:for="{{list}}" wx:key="this" bindtap="click" data-id="{{index}}">{{item.name}} : {{item.score.php}}</view>

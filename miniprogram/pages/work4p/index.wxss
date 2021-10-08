@@ -1,0 +1,26 @@
+/* pages/work4/index.wxss */
+.body{
+  margin: 25rpx;
+}
+.tab{
+  display: flex;
+}
+.sheet{
+  width: 100rpx;
+  background-image:linear-gradient(#ddd,#bbb);
+  border: 2rpx solid rgba(0, 0, 0,.5);
+  border-radius: 9rpx;
+  padding: 9rpx 16rpx;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+.active{
+  background: #369;
+}
+.footer{
+  background-color: lightgray;
+  text-align: center;
+  font-size: 40rpx;
+  font-family: 'Courier New', Courier, monospace;
+}

@@ -13,7 +13,13 @@ Page({
     ],
     msg:'hello world'
   },
-
+click(e){
+  const id = e.target.dataset.id;
+  console.log(id);
+  wx.showToast({
+    title: `${this.data.list[id].name} : ${this.data.list[id].score.miniapp},${this.data.list[id].score.php}`
+  })
+},
   /**
    * 生命周期函数--监听页面加载
    */
