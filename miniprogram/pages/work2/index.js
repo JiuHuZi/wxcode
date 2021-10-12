@@ -1,14 +1,14 @@
 Page({
   data:{
-    msg:'惊喜不惊喜'
+    msg:'意外不意外'
   },
   kkk(){
-    if(this.data.msg == '惊喜不惊喜'){
+    if(this.data.msg == '意外不意外'){
       this.setData({
-        msg:'意外不意外'
+        msg:'惊喜不惊喜'
       });
     }else{this.setData({
-      msg:'惊喜不惊喜'
+      msg:'意外不意外'
     });
 
     }

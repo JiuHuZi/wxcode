@@ -1,8 +1,8 @@
 <form bindsubmit="submit">
-  <text>第一个数：</text>
+  <text>请输入第1个数字：</text>
   <input type="number" class="num1" name='num1'></input>
-  <text>第二个数：</text>
+  <text>请输入第2个数字：</text>
   <input type="number" class="num2" name='num2'></input>
-  <button form-type="submit" type="primary">提交</button>
+  <button form-type="submit" class="submit" style="width: 100%;">提交</button>
+  <text style="font-weight: bold;color: {{color}};">比较结果：{{result}}</text>
 </form>
-<text>比较结果：{{result}}</text>

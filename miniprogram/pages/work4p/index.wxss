@@ -7,13 +7,13 @@
 }
 .sheet{
   width: 100rpx;
-  background-image:linear-gradient(#ddd,#bbb);
+  background-image:linear-gradient(#ccc,#eee);
   border: 2rpx solid rgba(0, 0, 0,.5);
   border-radius: 9rpx;
   padding: 9rpx 16rpx;
   text-align: center;
   font-weight: bold;
-  color: #fff;
+  color: #000;
 }
 .active{
   background: #369;

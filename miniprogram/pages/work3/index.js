@@ -1,6 +1,7 @@
 Page({
   data:{
-    result: '不知道'
+    result: '',
+    color:'red'
   },
   submit(e){
     // console.log(e);
@@ -10,15 +11,18 @@ Page({
     
     if(num1 == num2){
       this.setData({
-        result:'两个数相等'
+        result:'两数相等',
+        color:'#000'
       })
     }else if(num1 > num2){
       this.setData({
-        result:'第一个数大于第二个数'
+        result:'第1个数大',
+        color:'red'
       })
     }else if(num1 < num2){
       this.setData({
-        result:'第二个数大于第一个数'
+        result:'第2个数大',
+        color:'blue'
       })  
     }
   }

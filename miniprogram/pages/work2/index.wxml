@@ -1,1 +1,1 @@
-<text bindtap='kkk'>{{msg}}</text>
+<text bindtap='kkk' style="font-size: 50px;">{{msg}}</text>

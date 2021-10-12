@@ -14,6 +14,5 @@
     "navigationBarTitleText": "微信小程序云开发",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

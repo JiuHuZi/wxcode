@@ -6,6 +6,6 @@
     <image src="{{src}}" style="width:100%;height:493px;margin: 0 auto;"/>
   </view>
   <view class="footer">
-    <text>尤克里里 yeah!</text>
+    <text style="font-weight: bold;">Hi 尤克里里!</text>
   </view>
 </view>
