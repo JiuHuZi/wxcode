@@ -2,11 +2,11 @@
     <!-- 屏幕 -->
     <view class="screen">
         <view>　{{num}}　</view>
-        <view>{{op}}</view>
+        <view>{{op}}　</view>
     </view>
     <!-- 键盘区 -->
     <view>
-        <view class="btnrow">
+        <view class="btnrow" >
             <view class="btn orange" bindtap="clear">C</view>
             <view class="btn orange" bindtap="delete">Del</view>
             <view class="btn orange" bindtap="opbtn" data-val="%">%</view>
@@ -14,8 +14,8 @@
         </view>
         <view class="btnrow">
             <view class="btn blue" bindtap="numbtn" data-val="7">7</view>
-            <view class="btn blue" bindtap="numbtn" data-val="7">8</view>
-            <view class="btn blue" bindtap="numbtn" data-val="7">9</view>
+            <view class="btn blue" bindtap="numbtn" data-val="8">8</view>
+            <view class="btn blue" bindtap="numbtn" data-val="9">9</view>
             <view class="btn orange" bindtap="opbtn" data-val="-">-</view>
         </view>
         <view class="btnrow">

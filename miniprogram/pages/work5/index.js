@@ -15,7 +15,7 @@ Page({
     },
     delete(){
         let num = this.data.num;
-        num = num.substr[0,num.length -1];
+        num = num.substr(0,num.length -1);
         num = num == '' ? '0' : num;
         this.setData({
             num
@@ -30,7 +30,7 @@ Page({
             this.isNewNum = false;
         }else{
             num += val;
-        };
+        }
         this.setData({
             num
         })
@@ -47,6 +47,7 @@ Page({
     },
     opbtn(e){
         console.log(e);
+        let op = this.data.op;
         let val = e.currentTarget.dataset.val;
         let curNum = Number(this.data.num);
         this.setData({
@@ -70,7 +71,7 @@ Page({
         }else if(op == '='){
             this.lastNum = curNum;
         }
-        thtis.setData({
+        this.setData({
             num:this.lastNum
         })
     }
