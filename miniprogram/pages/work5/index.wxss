@@ -1,7 +1,7 @@
 .content{
     display: flex;
     flex-direction: column;
-    font-style: 70px;
+    font-style: 70rpx;
     font-weight: bold;
     color: white;
 }
@@ -11,7 +11,7 @@
 }
 .btnrow{
     display: flex;
-    height: 200px;
+    height: 200rpx;
 }
 .btn{
     width: 25%;
@@ -27,5 +27,5 @@
     background:blue;
 }
 .zero{
-    width: 50px;
+    width: 50%;
 }
