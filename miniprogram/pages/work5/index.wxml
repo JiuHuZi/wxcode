@@ -1,0 +1,16 @@
+<view class="content">
+    <!-- 屏幕 -->
+    <view class="screen">
+        <view>{{num}}000</view>
+        <view>{{op}}</view>
+    </view>
+    <!-- 键盘区 -->
+    <view>
+        <view class="btnrow">
+            <view class="btn orange" bindtap="clear">C</view>
+            <view class="btn orange" bindtap="delete">Del</view>
+            <view class="btn orange" bindtap="opbtn" data-val="%">%</view>
+            <view class="btn orange" bindtap="opbtn" data-val="+">+</view>
+        </view>
+    </view>
+</view>
