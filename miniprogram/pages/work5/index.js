@@ -13,7 +13,7 @@ Page({
             op:''
         })
     },
-    delte(){
+    delete(){
         let num = this.data.num;
         num = num.substr[0,num.length -1];
         num = num == '' ? '0' : num;
@@ -21,7 +21,7 @@ Page({
             num
         })
     },
-    numbtm(e){
+    numbtn(e){
         console.log(e);
         let val = e.currentTarget.dataset.val;
         let num = this.data.num;
