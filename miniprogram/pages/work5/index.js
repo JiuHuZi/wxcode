@@ -1,66 +1,77 @@
-// pages/work5/index.js
 Page({
-
-    /**
-     * 页面的初始数据
-     */
-    data: {
-
+    data:{
+        num:'0',
+        op:''
     },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function (options) {
-
+    lastNum:0,
+    isNewNum:false,
+    clear(){
+        this.isNewNum = true;
+        this.lastNum = 0;
+        this.setData({
+            num: '0',
+            op:''
+        })
     },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
+    delte(){
+        let num = this.data.num;
+        num = num.substr[0,num.length -1];
+        num = num == '' ? '0' : num;
+        this.setData({
+            num
+        })
     },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
+    numbtm(e){
+        console.log(e);
+        let val = e.currentTarget.dataset.val;
+        let num = this.data.num;
+        if(num == '0' || this.isNewNum){
+            num = val
+            this.isNewNum = false;
+        }else{
+            num += val;
+        };
+        this.setData({
+            num
+        })
     },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
+    dotbtn(){
+        let num = this.data.num;
+        if(num.indexOf('.')>=0){
+            return;
+        }
+        num += '.';
+        this.setData({
+            num
+        })
     },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
+    opbtn(e){
+        console.log(e);
+        let val = e.currentTarget.dataset.val;
+        let curNum = Number(this.data.num);
+        this.setData({
+            op:val
+        })
+        this.isNewNum = true;
+        if(this.lastNum == 0){
+            this.lastNum = curNum;
+            return
+        }
+        if(op == '+'){
+            this.lastNum += curNum;
+        }else if(op == '-'){
+            this.lastNum -= curNum;
+        }else if(op == '*'){
+            this.lastNum *= curNum;
+        }else if(op == '/'){
+            this.lastNum /= curNum;
+        }else if(op == '%'){
+            this.lastNum %= curNum;
+        }else if(op == '='){
+            this.lastNum = curNum;
+        }
+        thtis.setData({
+            num:this.lastNum
+        })
     }
 })

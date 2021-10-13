@@ -1,7 +1,7 @@
 <view class="content">
     <!-- 屏幕 -->
     <view class="screen">
-        <view>{{num}}000</view>
+        <view>　{{num}}　</view>
         <view>{{op}}</view>
     </view>
     <!-- 键盘区 -->
