@@ -8,7 +8,7 @@
     <view>
         <view class="btnrow" >
             <view class="btn orange" bindtap="clear">C</view>
-            <view class="btn orange" bindtap="delete">Del</view>
+            <view class="btn orange" bindtap="delete">{{fh}}-</view>
             <view class="btn orange" bindtap="opbtn" data-val="%">%</view>
             <view class="btn orange" bindtap="opbtn" data-val="+">+</view>
         </view>

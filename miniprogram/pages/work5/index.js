@@ -1,7 +1,8 @@
 Page({
     data:{
         num:'0',
-        op:''
+        op:'',
+        fh:'<'
     },
     lastNum:0,
     isNewNum:false,

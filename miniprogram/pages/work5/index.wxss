@@ -25,7 +25,7 @@
     background: orange;
 }
 .blue{
-    background:blue;
+    background:#9024ff;
 }
 .zero{
     width: 50%;
