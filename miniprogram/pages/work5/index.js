@@ -63,11 +63,11 @@ Page({
         if(op == '+'){
             this.lastNum = calc.add(this.lastNum,curNum);
         }else if(op == '-'){
-            this.lastNum -= curNum;
+            this.lastNum = calc.sub(this.lastNum,curNum);
         }else if(op == '*'){
-            this.lastNum *= curNum;
+            this.lastNum = calc.mul(this.lastNum,curNum);
         }else if(op == '/'){
-            this.lastNum /= curNum;
+            this.lastNum = calc.div(this.lastNum,curNum);
         }else if(op == '%'){
             this.lastNum %= curNum;
         }else if(op == '='){
