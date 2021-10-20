@@ -1,3 +1,4 @@
+const calc = require('calc.js');
 Page({
     data:{
         num:'0',
@@ -23,7 +24,7 @@ Page({
         })
     },
     numbtn(e){
-        console.log(e);
+        // console.log(e);
         let val = e.currentTarget.dataset.val;
         let num = this.data.num;
         if(num == '0' || this.isNewNum){
@@ -60,7 +61,7 @@ Page({
             return
         }
         if(op == '+'){
-            this.lastNum += curNum;
+            this.lastNum = calc.add(this.lastNum,curNum);
         }else if(op == '-'){
             this.lastNum -= curNum;
         }else if(op == '*'){
