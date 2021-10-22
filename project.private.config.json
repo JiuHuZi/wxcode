@@ -1,42 +1,36 @@
 {
-    "setting": {},
-    "condition": {
-        "plugin": {
-            "list": []
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
         },
-        "game": {
-            "list": []
+        {
+          "name": "pages/work6/propety",
+          "pathName": "pages/work6/propety",
+          "query": "",
+          "scene": null
         },
-        "gamePlugin": {
-            "list": []
-        },
-        "miniprogram": {
-            "list": [
-                {
-                    "id": -1,
-                    "name": "db guide",
-                    "pathName": "pages/databaseGuide/databaseGuide",
-                    "query": ""
-                },
-                {
-                    "name": "pages/work6/propety",
-                    "pathName": "pages/work6/propety",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/work6/divorce",
-                    "pathName": "pages/work6/divorce",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/work6/divorce",
-                    "pathName": "pages/work6/divorce",
-                    "query": "",
-                    "scene": null
-                }
-            ]
+        {
+          "name": "pages/work6/divorce",
+          "pathName": "pages/work6/divorce",
+          "query": "",
+          "scene": null
         }
+      ]
     }
+  }
 }
