@@ -1,0 +1,15 @@
+<view class="page">
+  <view class="body">
+    <form bindsubmit="formsubmit" bindreset="formreset">
+        <switch bindchange="switchchange">是否涉及财产分割</switch>
+        <view wx:if="{{condition}}">
+             <view>财产标的金额（单位：元）</view>           
+             <input type="number" class="input" name='property' placeholder="标的金额"></input>
+             <button form-type="submit" type="primary">计算</button>
+             <text decode="true">\n</text>
+             <button form-type="reset" type="primary">重置</button>
+        </view>
+    </form>
+    <view>诉讼费为{{fei}},减半收取为{{feiban}}</view>
+  </view>  
+</view>

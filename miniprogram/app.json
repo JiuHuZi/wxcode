@@ -6,7 +6,9 @@
         "pages/work4/index",
         "pages/work4p/index",
         "pages/test/test",
-        "pages/work5/index"
+        "pages/work5/index",
+        "pages/work6/propety",
+        "pages/work6/divorce"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",
@@ -15,5 +17,21 @@
         "navigationBarTitleText": "微信小程序云开发",
         "navigationBarTextStyle": "black"
     },
-    "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/work6/propety",
+                "text": "财产",
+                "iconPath": "/pages/work6/images/m1.png",
+                "selectedIconPath": "/pages/work6/images/m2.png"
+            },
+            {
+                "pagePath": "pages/work6/divorce",
+                "text": "离婚",
+                "iconPath": "/pages/work6/images/n1.png",
+                "selectedIconPath": "/pages/work6/images/n2.png"
+            }
+        ]
+    }
 }
