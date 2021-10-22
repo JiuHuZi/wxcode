@@ -80,15 +80,11 @@ Page({
         let condition = e.detail.value;
         // console.log(condition);
         if(condition){
-            this.setData({
-                fei:0,
-                feiban:0,
+            this.setData({   
                 condition
             })
         }else{
-            this.setData({
-                fei:300,
-                feiban:150,
+            this.setData({ 
                 condition
             })
         }
