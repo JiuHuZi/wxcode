@@ -72,6 +72,17 @@ Page({
             this.lastNum %= curNum;
         }else if(op == '='){
             this.lastNum = curNum;
+        }else if(op == 'pf'){
+            this.lastNum *= this.lastNum
+        }else if(op == 'kf'){
+            this.lastNum = Math.sqrt(this.lastNum)
+        }else if(op == 'sin'){
+            let radius = this.lastNum * Math.PI / 180
+            if(this.lastNum % 180 == 0) radius = 0
+            this.lastNum = Math.sin(radius)
+        }else if(op == 'cos'){
+            let radius = this.lastNum * Math.PI / 180
+            this.lastNum = Math.cos(radius)
         }
         this.setData({
             num:this.lastNum
