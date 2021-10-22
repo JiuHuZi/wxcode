@@ -1,12 +1,14 @@
 <view class="page">
     <view class="body">
-        <form bindsubmit="formsubmit">
-            <text>财产标的金额（单位：元）</text>
+        <form bindsubmit="formsubmit" bindreset="formreset">
+            <switch bindchange="switchchange" class="msg">是否是外星人</switch>
+            <text>\n</text>
+            <text class="msg">财产标的金额（单位：元）</text>
             <input type="number" class="input" name='property' placeholder="标的金额"></input>
             <button type="primary" form-type="submit">计算</button>
             <text decode="true">\n</text>
-            <button form-type="reset" type="primary">重置</button>
+            <button form-type="reset" class="reset">重置</button>
         </form>
+        <view class="msg">诉讼费为{{fei}}元，减半收取为{{feiban}}元</view>
     </view>
-    <view>诉讼费为{{fei}}元，减半收取为{{feiban}}元</view>
 </view>

@@ -23,14 +23,14 @@
             {
                 "pagePath": "pages/work6/propety",
                 "text": "财产",
-                "iconPath": "/pages/work6/images/m1.png",
-                "selectedIconPath": "/pages/work6/images/m2.png"
+                "iconPath": "/pages/work6/images/n1.png",
+                "selectedIconPath": "/pages/work6/images/n2.png"
             },
             {
                 "pagePath": "pages/work6/divorce",
                 "text": "离婚",
-                "iconPath": "/pages/work6/images/n1.png",
-                "selectedIconPath": "/pages/work6/images/n2.png"
+                "iconPath": "/pages/work6/images/m1.png",
+                "selectedIconPath": "/pages/work6/images/m2.png"
             }
         ]
     }

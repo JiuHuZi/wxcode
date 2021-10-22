@@ -1,1 +1,21 @@
-/* pages/work6/propety.wxss */
+.body{
+  margin: 20px;
+  background-color: #fdedd0;
+}
+.reset{
+  background-color: #f7f7f7;
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.msg{
+  font-size: 20px;
+  font-weight: bold;
+}
+.input{
+  background-color: #7dffcf;
+  margin-bottom: 20px;
+  font-size: 20px;
+}

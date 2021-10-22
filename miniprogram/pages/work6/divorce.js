@@ -2,7 +2,8 @@ Page({
     data:{
         fei:300,
         feiban:150,
-        condition:false
+        condition:false,
+        msg:'不涉及财产分割的'
     },
     switchchange(e){
         // console.log(e);
@@ -12,13 +13,16 @@ Page({
             this.setData({
                 fei:0,
                 feiban:0,
-                condition
+                condition,
+                msg:''
+
             })
         }else{
             this.setData({
                 fei:300,
                 feiban:150,
-                condition
+                condition,
+                msg:'不涉及财产分割的'
             })
         }
     },
@@ -29,15 +33,21 @@ Page({
         let feiban = 0;
         console.log(bd);
         if(bd<=200000){
-            fei = 300;
+            fei += 300;
         }else{
-            fei = bd * 0.005
+            fei += bd * 0.005
         }
         feiban = fei * 0.5;
         fei = fei.toFixed(2)
         feiban = feiban.toFixed(2)
         this.setData({
             fei,feiban
+        })
+    },
+    formreset(){
+        this.setData({
+            fei:'0',
+            feiban:'0'
         })
     }
 })

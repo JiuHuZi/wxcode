@@ -1,7 +1,8 @@
 Page({
     data:{
         fei:'',
-        feiban:''
+        feiban:'',
+        condition:false
     },
     formsubmit(e){
         console.log(e);
@@ -11,7 +12,7 @@ Page({
         let n1 = 0;
         if(bd > 20000000){
             n1 = (bd - 20000000)
-            fei += n1 * 0.5
+            fei += n1 * 0.005
             bd = bd - n1;
         }
          if(bd <= 20000000 && bd > 10000000){
@@ -57,6 +58,10 @@ Page({
          if(bd <= 10000){
             fei += 50;
         }
+        let condition = this.data.condition;
+        if(condition){
+            fei *= 2;
+        }
         feiban = fei / 2
         fei = fei.toFixed(2)
         feiban = feiban.toFixed(2)
@@ -64,5 +69,28 @@ Page({
             fei,feiban
         })
     },
-    
+    formreset(){
+        this.setData({
+            fei:'0',
+            feiban:'0'
+        })
+    },
+    switchchange(e){
+        // console.log(e);
+        let condition = e.detail.value;
+        // console.log(condition);
+        if(condition){
+            this.setData({
+                fei:0,
+                feiban:0,
+                condition
+            })
+        }else{
+            this.setData({
+                fei:300,
+                feiban:150,
+                condition
+            })
+        }
+    },
 })
