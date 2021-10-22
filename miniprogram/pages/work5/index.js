@@ -77,12 +77,12 @@ Page({
         }else if(op == 'kf'){
             this.lastNum = Math.sqrt(this.lastNum)
         }else if(op == 'sin'){
-            let radius = this.lastNum * Math.PI / 180
-            if(this.lastNum % 180 == 0) radius = 0
-            this.lastNum = Math.sin(radius)
+            // let radius = this.lastNum * Math.PI / 180
+            // if(this.lastNum % 180 == 0) radius = 0
+            this.lastNum = Math.sin(this.lastNum)
         }else if(op == 'cos'){
-            let radius = this.lastNum * Math.PI / 180
-            this.lastNum = Math.cos(radius)
+            // let radius = this.lastNum * Math.PI / 180
+            this.lastNum = Math.cos(this.lastNum)
         }
         this.setData({
             num:this.lastNum
