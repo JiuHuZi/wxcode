@@ -33,9 +33,9 @@ Page({
         let feiban = 0;
         console.log(bd);
         if(bd<=200000){
-            fei += 300;
+            fei = 300;
         }else{
-            fei += bd * 0.005
+            fei += (bd - 200000) * 0.005 + 300
         }
         feiban = fei * 0.5;
         fei = fei.toFixed(2)
