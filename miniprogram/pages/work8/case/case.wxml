@@ -1,0 +1,10 @@
+<import src="../template/template.wxml"></import>
+<view class="page">
+    <!-- 页头 -->
+    <template is='header' />
+    <view class="body">
+        <video src="http://www.gdmec.cn/__local/B/7A/A8/33FAFA2A32ECA6C48ACA9B12075_ECCF5224_8610958.mp4" autoplay="true"></video>
+    </view>
+    <!-- 页脚 -->
+    <template is='footer' />
+</view>

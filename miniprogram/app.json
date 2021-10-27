@@ -8,7 +8,11 @@
         "pages/test/test",
         "pages/work5/index",
         "pages/work6/propety",
-        "pages/work6/divorce"
+        "pages/work6/divorce",
+        "pages/work8/index/index",
+        "pages/work8/map/map",
+        "pages/work8/case/case",
+        "pages/work8/person/person"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",
