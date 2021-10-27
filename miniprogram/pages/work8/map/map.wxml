@@ -1,2 +1,2 @@
 <map id="map" longitude="113.4500" latitude="23.3860" markers="{{markers}}" scale="18" 
-style="width: 100%;height: {{height}};"></map>
+style="width: 100%;height: {{height}}px;"></map>
