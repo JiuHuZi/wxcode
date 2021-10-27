@@ -11,7 +11,7 @@
 
 /* 下部外周样式 */
 .body {
-    margin: 50rpx 10rpx 0 10rpx;
+    margin: 50rpx 10rpx 20rpx 10rpx;
     display: flex;
     flex-direction: row;
 }
@@ -19,7 +19,7 @@
 /* 左右容器大小 */
 .body view {
     width: 300rpx;
-    height: 600rpx;
+    height: 700rpx;
     align-items: center;
 }
 
@@ -33,17 +33,19 @@
 /* 子容器大小 */
 .left view {
     width: 200rpx;
-    height: 200rpx;
+    height: 300rpx;
 }
 
 /* 设置图文比例3:1 */
 .l1,
-.l3 {
+.l3,
+.l5 {
     flex: 3
 }
 
 .l2,
-.l4 {
+.l4,
+.l6 {
     flex: 1
 }
 .right{
@@ -53,7 +55,7 @@
 }
 .right view{
     width: 200rpx;
-    height: 200rpx;
+    height: 300rpx;
 }
 /* 图标大小样式 */
 .pic1{

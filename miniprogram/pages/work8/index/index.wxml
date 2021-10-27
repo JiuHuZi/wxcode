@@ -21,6 +21,14 @@
             <view class="l4">
                 <text>地图导航</text>
             </view>
+            <view class="l5">
+                <navigator url="../map/map">
+                    <image class="pic1" src="../images/5.png" />
+                </navigator>
+            </view>
+            <view class="l6">
+                <text>现任领导</text>
+            </view>
         </view>
         <view class="right">
             <view class="l1">
@@ -36,6 +44,12 @@
             </view>
             <view class="l4">
                 <text>联系方式</text>
+            </view>
+            <view class="l5" bindtap="phone">
+                <image class="pic1" src="../images/6.png" />
+            </view>
+            <view class="l6">
+                <text>校园风光</text>
             </view>
         </view>
     </view>
