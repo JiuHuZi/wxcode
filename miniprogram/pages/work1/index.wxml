@@ -1,10 +1,12 @@
-<view class="sn">07200903陈健生</view>
-<navigator class="work1" url="/pages/work1/index">work1 任务列表</navigator>
-<navigator class="work2" url="/pages/work2/index">work2 惊喜不惊喜</navigator>
-<navigator class="work3" url="/pages/work3/index">work3 比大小</navigator>
-<navigator class="work4" url="/pages/work4/index">work4 尤克里里</navigator>
-<navigator class="work4p" url="/pages/work4p/index">work4p 尤克里里</navigator>
-<navigator class="work5" url="/pages/work5/index">work5 计算器</navigator>
-<navigator class="work6" open-type="switchTab"  url="/pages/work6/propety">work6 诉讼费</navigator>
-<navigator class="work8" url="/pages/work8/index/index">work8 机电微官网</navigator>
-<navigator class="test" url="/pages/test/test">test 测试文件</navigator>
+<view class="body">
+  <view class="sn">——07200903陈健生——</view>
+  <navigator class="com work1" url="/pages/work1/index"><i class=" icon-xiangmu iconfont"></i><span>work1 任务列表</span></navigator>
+  <navigator class="com work2" url="/pages/work2/index"><i class=" icon-huodong iconfont"></i><span>work2 惊喜不惊喜</span></navigator>
+  <navigator class="com work3" url="/pages/work3/index"><i class=" icon-zaixiantiaocha iconfont"></i><span>work3 比大小</span></navigator>
+  <navigator class="com work4" url="/pages/work4/index"><i class=" icon-guitar iconfont"></i><span>work4 尤克里里</span></navigator>
+  <navigator class="com work4p" url="/pages/work4p/index"><i class=" icon-guitar iconfont"></i><span>work4p 尤克里里</span></navigator>
+  <navigator class="com work5" url="/pages/work5/index"><i class=" icon-jisuanqi iconfont"></i><span>work5 计算器</span></navigator>
+  <navigator class="com work6" open-type="switchTab"  url="/pages/work6/propety"><i class=" icon-zijinshouzhi iconfont"></i><span>work6 诉讼费</span></navigator>
+  <navigator class="com work8" url="/pages/work8/index/index"><i class=" icon-xiangmujianshe iconfont"></i><span>work8 机电微官网</span></navigator>
+  <navigator class="com test" url="/pages/test/test"><i class=" icon-xitongrizhi iconfont"></i><span>test 测试文件</span></navigator>
+</view>
