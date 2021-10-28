@@ -22,7 +22,7 @@
                 <text>地图导航</text>
             </view>
             <view class="l5">
-                <navigator url="../person/person">
+                <navigator url="../xrld/xrld">
                     <image class="pic1" src="../images/5.png" />
                 </navigator>
             </view>
@@ -46,7 +46,7 @@
                 <text>联系方式</text>
             </view>
             <view class="l5">
-                <navigator url="../person/person">
+                <navigator url="../xxfg/xxfg">
                     <image class="pic1" src="../images/6.png" />
                 </navigator>
             </view>
