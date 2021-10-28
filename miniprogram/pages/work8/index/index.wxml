@@ -11,7 +11,7 @@
                 </navigator>
             </view>
             <view class="l2">
-                <text>学校简介</text>
+                <text>学院简介</text>
             </view>
             <view class="l3">
                 <navigator url="../map/map">
