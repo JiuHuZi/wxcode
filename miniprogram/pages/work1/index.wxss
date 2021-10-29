@@ -33,3 +33,18 @@
   font-weight: bold;
   opacity: 0.5;
 }
+.weather{
+  color:#0989de;
+}
+.guitar{
+  color: #c6a07d;
+}
+.jisuanqi{
+  color: #333;
+}
+.qiqiu{
+  color: pink;
+}
+.diannao{
+  color:lightgreen;
+}
