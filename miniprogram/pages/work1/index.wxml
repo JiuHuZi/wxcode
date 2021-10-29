@@ -7,6 +7,7 @@
   <navigator class="com work4p" url="/pages/work4p/index"><i class=" icon-guitar iconfont"></i><span>work4p 尤克里里</span></navigator>
   <navigator class="com work5" url="/pages/work5/index"><i class=" icon-jisuanqi iconfont"></i><span>work5 计算器</span></navigator>
   <navigator class="com work6" open-type="switchTab"  url="/pages/work6/propety"><i class=" icon-zijinshouzhi iconfont"></i><span>work6 诉讼费</span></navigator>
+  <navigator class="com work7" url="/pages/work7/index"><i class=" icon-xitongrizhi iconfont"></i><span>work7 天气预报</span></navigator>
   <navigator class="com work8" url="/pages/work8/index/index"><i class=" icon-xiangmujianshe iconfont"></i><span>work8 机电微官网</span></navigator>
   <navigator class="com test" url="/pages/test/test"><i class=" icon-xitongrizhi iconfont"></i><span>test 测试文件</span></navigator>
 </view>
