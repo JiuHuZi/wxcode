@@ -2,7 +2,7 @@
     <view class="search">
         <text>城市：</text>
         <input type="text" placeholder="城市" bindinput="input"/>
-        <icon type="search" bindtap="search"></icon>
+        <icon type="search" bindtap="search" sty></icon>
     </view>
     <view>
         <view>{{city}}天气预报</view>
