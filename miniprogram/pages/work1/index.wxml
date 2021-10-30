@@ -1,13 +1,13 @@
 <view class="body">
   <view class="sn">—— 07200903陈健生 ——</view>
-  <navigator class="com work1" url="/pages/work1/index"><i class=" icon-xiangmu iconfont"></i><span>work1 任务列表</span></navigator>
-  <navigator class="com work2" url="/pages/work2/index"><i class="qiqiu icon-huodong iconfont"></i><span>work2 惊喜不惊喜</span></navigator>
-  <navigator class="com work3" url="/pages/work3/index"><i class=" icon-zaixiantiaocha iconfont"></i><span>work3 比大小</span></navigator>
-  <navigator class="com work4" url="/pages/work4/index"><i class="guitar icon-guitar iconfont"></i><span>work4 尤克里里</span></navigator>
-  <navigator class="com work4p" url="/pages/work4p/index"><i class="guitar icon-guitar iconfont"></i><span>work4p 尤克里里</span></navigator>
-  <navigator class="com work5" url="/pages/work5/index"><i class="jisuanqi icon-jisuanqi iconfont"></i><span>work5 计算器</span></navigator>
-  <navigator class="com work6" open-type="switchTab"  url="/pages/work6/propety"><i class=" icon-zijinshouzhi iconfont"></i><span>work6 诉讼费</span></navigator>
-  <navigator class="com work7" url="/pages/work7/index"><i class="weather icon-tianqi-copy iconfont"></i><span>work7 天气预报</span></navigator>
-  <navigator class="com work8" url="/pages/work8/index/index"><i class="diannao icon-xiangmujianshe iconfont"></i><span>work8 机电微官网</span></navigator>
-  <navigator class="com test" url="/pages/test/test"><i class=" icon-xitongrizhi iconfont"></i><span>test 测试文件</span></navigator>
+  <navigator class="com work1" url="/pages/work1/index"><i class=" icon-xiangmu iconfont"></i><span>work1 任务列表</span><i class="end iconfont icon-jiantou1"></i></navigator>
+  <navigator class="com work2" url="/pages/work2/index"><i class="qiqiu icon-huodong iconfont"></i><span>work2 惊喜不惊喜</span><i class="end iconfont icon-jiantou1"></i></navigator>
+  <navigator class="com work3" url="/pages/work3/index"><i class=" icon-zaixiantiaocha iconfont"></i><span>work3 比大小</span><i class="end iconfont icon-jiantou1"></i></navigator>
+  <navigator class="com work4" url="/pages/work4/index"><i class="guitar icon-guitar iconfont"></i><span>work4 尤克里里</span><i class="end iconfont icon-jiantou1"></i></navigator>
+  <navigator class="com work4p" url="/pages/work4p/index"><i class="guitar icon-guitar iconfont"></i><span>work4p 尤克里里</span><i class="end iconfont icon-jiantou1"></i></navigator>
+  <navigator class="com work5" url="/pages/work5/index"><i class="jisuanqi icon-jisuanqi iconfont"></i><span>work5 计算器</span><i class="end iconfont icon-jiantou1"></i></navigator>
+  <navigator class="com work6" open-type="switchTab"  url="/pages/work6/propety"><i class=" icon-zijinshouzhi iconfont"></i><span>work6 诉讼费</span><i class="end iconfont icon-jiantou1"></i></navigator>
+  <navigator class="com work7" url="/pages/work7/index"><i class="weather icon-tianqi-copy iconfont"></i><span>work7 天气预报</span><i class="end iconfont icon-jiantou1"></i></navigator>
+  <navigator class="com work8" url="/pages/work8/index/index"><i class="diannao icon-xiangmujianshe iconfont"></i><span>work8 机电微官网</span><i class="end iconfont icon-jiantou1"></i></navigator>
+  <navigator class="com test" url="/pages/test/test"><i class=" icon-xitongrizhi iconfont"></i><span>test 测试文件</span><i class="end iconfont icon-jiantou1"></i></navigator>
 </view>
