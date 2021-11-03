@@ -40,5 +40,10 @@
                 "selectedIconPath": "/pages/work6/images/m2.png"
             }
         ]
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "小程序获取GPS坐标，请求天气预报"
+        }
     }
 }

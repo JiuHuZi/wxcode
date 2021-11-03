@@ -6,7 +6,9 @@
     </view>
     <view>
         <view>{{city}}天气预报</view>
-        <view>{{temperature}}</view>
-        <view>{{direct}}</view>
+        <view>气温：{{temperature}}</view>
+        <view>风向：{{direct}}</view>
+        <view>经度：{{longitude}}</view>
+        <view>纬度：{{latitude}}</view>
     </view>
 </view>
