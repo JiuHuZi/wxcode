@@ -1,14 +1,26 @@
 <view class="content">
     <view class="search">
-        <text>城市：</text>
-        <input type="text" placeholder="城市" bindinput="input"/>
-        <icon type="search" bindtap="search" sty></icon>
+        <i class="icon-weizhi iconfont weizhi"></i>
+        <!-- <text>城市：</text> -->
+        <input type="text" placeholder="城市" bindinput="input" class="search_ipt" placeholder-style="color:#fff;"/>
+        <i class="icon-sousuo1 iconfont weizhi"  bindtap="search"></i>
     </view>
     <view>
         <view>{{city}}天气预报</view>
-        <view>气温：{{temperature}}</view>
+        <view class="temp">{{temperature}}°</view>
+        <view class="wStatus">{{wStatus}}</view>
+        <view>湿度：{{humidity}}</view>
         <view>风向：{{direct}}</view>
-        <view>经度：{{longitude}}</view>
-        <view>纬度：{{latitude}}</view>
+        <view>风力：{{wPower}}级</view>
+        <view>气压：{{kPa}}级</view>
+        <!-- <view>经度：{{longitude}}</view>
+        <view>纬度：{{latitude}}</view> -->
+    </view>
+    <!-- 未来三天 -->
+    <view wx:for="{{weather}}">
+        <view>日期：{{item.day}}</view>
+        <view>最高温度：{{item.maxTemp}}</view>
+        <view>最低温度：{{item.minTemp}}</view>
+        <view>气象类型：{{item.wType}}</view>
     </view>
 </view>

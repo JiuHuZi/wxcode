@@ -1,10 +1,50 @@
-.content{
+@import "../icon.wxss";
+page{
+    margin: 0;
+    padding: 0;
+    /* background-color: lightblue; */
+    background-image: linear-gradient(#ffd1dc, #a8cef5);
+}
+.content {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 40rpx;
 
 }
-.search{
+
+.search {
     display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.weizhi {
+    color: #fff;
+}
+
+.iconfont {
+    font-size: 30px;
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.search_ipt {
+    width: 45%;
+    /* border: 1px solid black; */
+    margin-right: 5px;
+    color: #fff;
+}
+.temp{
+    text-align: center;
+    font-size: 80px;
+    color: #fff;
+    margin-top: 20px;
+    /* font-weight: bold; */
+}
+
+.wStatus{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
 }
