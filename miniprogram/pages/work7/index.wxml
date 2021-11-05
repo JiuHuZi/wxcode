@@ -17,7 +17,7 @@
         <view>纬度：{{latitude}}</view> -->
     </view>
     <!-- 未来三天 -->
-    <view wx:for="{{weather}}">
+    <view wx:for="{{weather}}" wx:key='this'>
         <view>日期：{{item.day}}</view>
         <view>最高温度：{{item.maxTemp}}</view>
         <view>最低温度：{{item.minTemp}}</view>
