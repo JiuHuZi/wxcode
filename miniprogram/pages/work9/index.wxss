@@ -1,0 +1,36 @@
+.content{
+    text-align: center;
+    margin: 58rpx;
+}
+.nav{
+    display: flex;
+}
+.tab{
+    flex: 1;
+    font-size: 70rpx;
+    background-color: gray;
+    /* color: #fff; */
+}
+.selected{
+    background-color: red;
+}
+.list{
+    border:1px solid #000;
+    font-size: 50rpx;
+}
+.income{
+    background-color: #369;
+}
+.pay{
+    background-color: #963;
+}
+.button{
+    margin: 50rpx;
+}
+.total{
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 50rpx;
+}

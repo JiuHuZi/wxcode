@@ -1,0 +1,24 @@
+<view class="content">
+    <!-- tab -->
+    <view class="nav">
+        <view class="tab {{isincome?'selected':''}}" bindtap="click" data-name="income">
+            <text>收入</text>
+        </view>
+        <view class="tab {{isincome?'':'selected'}}" bindtap="click" data-name="pay">
+            <text>支出</text>
+        </view>
+    </view>
+    <!-- 金额列表 -->
+    <view wx:if="{{income}}">
+        <view class="list income" wx:for="{{incomelist}}">{{item}}</view>
+    </view>
+    <view wx:else>
+        <view class="list pay" wx:for="{{pagelist}}">{{item}}</view>
+    </view>
+    <button class="button" bindtap="add" type="primary">增加</button>
+    <input type="number" wx:if="isinput" value="{{inputval}}" bindconfirm="confirm" placeholder="{{isincome?'收入':'支出'}}金额"/>
+</view>
+<!-- 汇总 -->
+<view class="total">
+    收入：{{incometotal}}   支出：{{paytotal}}  余额：{{incometotal - paytotal}}
+</view>
