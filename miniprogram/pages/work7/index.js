@@ -70,7 +70,7 @@ Page({
       url,
       success(e) {
         console.log(e);
-        imgheight = '60vh'
+        imgheight = '65vh'
         let {
           lat,
           lon
