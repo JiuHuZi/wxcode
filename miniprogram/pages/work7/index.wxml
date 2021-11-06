@@ -2,25 +2,36 @@
     <view class="search">
         <i class="icon-weizhi iconfont weizhi"></i>
         <!-- <text>城市：</text> -->
-        <input type="text" placeholder="城市" bindinput="input" class="search_ipt" placeholder-style="color:#fff;"/>
-        <i class="icon-sousuo1 iconfont weizhi"  bindtap="search"></i>
+        <input type="text" placeholder="城市" bindinput="input" class="search_ipt" placeholder-style="color:#fff;" />
+        <i class="icon-sousuo1 iconfont weizhi" bindtap="search"></i>
     </view>
     <view>
-        <view>{{city}}天气预报</view>
+        <view class="city">{{city}}天气预报</view>
         <view class="temp">{{temperature}}°</view>
         <view class="wStatus">{{wStatus}}</view>
-        <view>湿度：{{humidity}}</view>
-        <view>风向：{{direct}}</view>
-        <view>风力：{{wPower}}级</view>
-        <view>气压：{{kPa}}级</view>
+        <view class="msg">
+            <view>湿度：{{humidity}}</view>
+            <view>风向：{{direct}}</view>
+        </view>
+        <view class="msg">
+            <view>风力：{{wPower}}级</view>
+            <view>气压：{{kPa}}级</view>
+        </view>
+
         <!-- <view>经度：{{longitude}}</view>
         <view>纬度：{{latitude}}</view> -->
     </view>
     <!-- 未来三天 -->
-    <view wx:for="{{weather}}" wx:key='this'>
-        <view>日期：{{item.day}}</view>
-        <view>最高温度：{{item.maxTemp}}</view>
-        <view>最低温度：{{item.minTemp}}</view>
-        <view>气象类型：{{item.wType}}</view>
+    <view>
+        
     </view>
+    <view class="feture">
+        <view wx:for="{{weather}}" wx:key='this'>
+            <view>{{item.day}}</view>
+            <view>{{item.wType}}</view>
+            <view>{{item.maxTemp}}/{{item.minTemp}}°C</view>
+            
+        </view>
+    </view>
+
 </view>

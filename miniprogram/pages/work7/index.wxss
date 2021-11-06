@@ -35,6 +35,11 @@ page{
     margin-right: 5px;
     color: #fff;
 }
+.city{
+    text-align: center;
+    color: #fff;
+    margin-top: 5px;
+}
 .temp{
     text-align: center;
     font-size: 80px;
@@ -47,4 +52,31 @@ page{
     color: #fff;
     text-align: center;
     font-size: 30px;
+}
+
+.msg{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+.msg view{
+    flex: 1;
+    /* padding-right: 20px; */
+    color: #fff;
+    margin-top: 15px;
+    width: 100%;
+}
+.feture{
+    margin: 20px;
+}
+.feture view{
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.feture view view{
+    width: 100%;
+    clear: both;
+    font-size: 18px;
+    text-align: center;
 }

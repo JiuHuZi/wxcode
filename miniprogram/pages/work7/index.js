@@ -14,9 +14,9 @@ Page({
         wPower:0,
         kPa:0,
         weather:[
-          {day:'1',maxTemp:'1',minTemp:'1',wType:'1'},
-          {day:'2',maxTemp:'2',minTemp:'2',wType:'2'},
-          {day:'3',maxTemp:'3',minTemp:'3',wType:'3'}
+          {day:'11-05',maxTemp:'1',minTemp:'1',wType:'晴'},
+          {day:'11-06',maxTemp:'2',minTemp:'2',wType:'晴'},
+          {day:'11-07',maxTemp:'3',minTemp:'3',wType:'晴'}
         ]
     },
     input(e){
