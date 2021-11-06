@@ -5,8 +5,9 @@ const baseurl = 'https://devapi.qweather.com/v7/weather/7d?key=40d969fc118d41288
 const cityurl = 'https://geoapi.qweather.com/v2/city/lookup?key=40d969fc118d4128869ac0375e2e7aac&location='
 Page({
   data: {
-    color:'#fff',
-    changeimg: './img/day.png',
+    imgheight:'100vh',
+    txtcolor:'#fff',
+    changeimg: './img/day.jpg',
     isfoot: false,
     NowmaxTemp: 0,
     NowminTemp: 0,
@@ -58,23 +59,26 @@ Page({
     let url = !loc ? `${cityurl}${adm}` : `${cityurl}${loc}&adm=${adm}`;
     let latitude = this.data.latitude;
     let longitude = this.data.longitude;
-    console.log(url);
+    // console.log(url);
     let burl = `${baseurl}${longitude},${latitude}`;
-    console.log(burl);
+    // console.log(burl);
     let weather = this.data.weather;
+    let imgheight = this.data.imgheight
     let that = this
     // 用搜索的城市查经纬度
     wx.request({
       url,
       success(e) {
         console.log(e);
+        imgheight = '60vh'
         let {
           lat,
           lon
         } = e.data.location[0]
         that.setData({
           latitude: lat,
-          longitude: lon
+          longitude: lon,
+          imgheight
         })
 
         // 近7天天气
@@ -144,14 +148,20 @@ Page({
     // console.log(date);
     if (date >= 20) {
       changeimg = './img/night.jpg';
-      txtcolor:'#fff';
+      txtcolor = '#fff';
     }else{
-      changeimg = './img/day.png';
-      txtcolor:'#000';
+      changeimg = './img/day.jpg';
+      txtcolor = '#000';
     }
     this.setData({
       changeimg,
-      color:txtcolor
+      txtcolor
+    })
+    wx.showModal({
+      title:'系统公告',
+      content:`搜索引擎：“和风天气”，\r\n操作说明： “如要搜索到区级地区，则需要在市级后面加上空格”
+      `,
+      showCancel:false
     })
   }
 })

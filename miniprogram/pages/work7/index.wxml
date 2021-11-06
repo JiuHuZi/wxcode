@@ -1,10 +1,10 @@
 <view class="content">
-    <view class="header" style="color:{{color}};">
-        <image src="{{changeimg}}" class="bg"></image>
+    <view class="header" style="color:{{txtcolor}};">
+        <image src="{{changeimg}}" class="bg" style="height:{{imgheight}};"></image>
         <view class="search">
             <i class="icon-weizhi iconfont weizhi"></i>
             <!-- <text>城市：</text> -->
-            <input type="text" placeholder="请输入城市" bindinput="input" class="search_ipt" placeholder-style="color:{{color}};" />
+            <input type="text" placeholder="请输入城市" bindinput="input" class="search_ipt" placeholder-style="color:{{txtcolor}};" />
             <i class="icon-sousuo1 iconfont weizhi" bindtap="search"></i>
         </view>
         <view class="today">
