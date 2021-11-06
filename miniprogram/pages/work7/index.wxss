@@ -1,19 +1,23 @@
 @import "../icon.wxss";
-/* @import "./wicon.wxss"; */
 page{
     margin: 0;
     padding: 0;
     /* background-color: lightblue; */
-    background-image: linear-gradient(#ffd1dc, #a8cef5);
+    /* background-image: linear-gradient(#ffd1dc, #a8cef5); */
 }
-.content {
+.content .header{
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 40rpx;
-
+    
 }
-
+.content .header .bg{
+    height: 60vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
 .search {
     display: flex;
     justify-content: center;
@@ -21,7 +25,7 @@ page{
 }
 
 .weizhi {
-    color: #fff;
+    /* color: #000; */
 }
 
 .iconfont {
@@ -34,17 +38,19 @@ page{
     width: 45%;
     /* border: 1px solid black; */
     margin-right: 5px;
-    color: #fff;
+    /* color: #000; */
+    margin-top: 3px;
+    text-align: center;
 }
 .city{
     text-align: center;
-    color: #fff;
+    /* color: #000; */
     margin-top: 5px;
 }
 .temp{
     text-align: center;
     font-size: 80px;
-    color: #fff;
+    /* color: #000; */
     margin-top: 20px;
     /* font-weight: bold; */
 }
@@ -53,7 +59,7 @@ page{
     text-align: center;
 }
 .wStatus{
-    color: #fff;
+    /* color: #000; */
     text-align: center;
     font-size: 30px;
 }
@@ -62,31 +68,53 @@ page{
     display: flex;
     justify-content: center;
     font-size: 16px;
+    /* color: #000; */
 }
 .msg view{
     flex: 1;
     /* padding-right: 20px; */
-    color: #fff;
     margin-top: 15px;
     width: 100%;
+    font-weight: bold;
 }
+.nowtemp{
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
 .feture{
     margin: 20px;
+    height: 100%;
 }
 .feture view{
     float: left;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 5px;
 }
 .feture view view{
     width: 100%;
     clear: both;
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
 }
 .foot{
-    height:30vh ;
+    height:20vh ;
     position: fixed;
-    bottom: 0;
+    bottom: 13vh;
     width: 100%;
+    /* background-color: rgba(0,0,0,.7); */
+    /* color:#fff; */
+    /* border-radius: 20px; */
+}
+.fweather:nth-child(1),.fweather:nth-child(2){
+    /* border-left: 1px solid #eee; */
+    border-right: 1px solid #ccc;
+}
+.fweather{
+    padding-right: 20px;
+}
+.fmsg{
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }

@@ -1,33 +1,39 @@
 <view class="content">
-    <view class="search">
-        <i class="icon-weizhi iconfont weizhi"></i>
-        <!-- <text>城市：</text> -->
-        <input type="text" placeholder="城市" bindinput="input" class="search_ipt" placeholder-style="color:#fff;" />
-        <i class="icon-sousuo1 iconfont weizhi" bindtap="search"></i>
-    </view>
-    <view class="today">
-        <view class="city">{{city}}天气预报</view>
-        <view class="temp">{{temperature}}°</view>
-        <view class="wStatus">{{wStatus}}</view>
-        <view class="msg">
-            <view>湿度：{{humidity}}%</view>
-            <view>风向：{{direct}}</view>
+    <view class="header" style="color:{{color}};">
+        <image src="{{changeimg}}" class="bg"></image>
+        <view class="search">
+            <i class="icon-weizhi iconfont weizhi"></i>
+            <!-- <text>城市：</text> -->
+            <input type="text" placeholder="请输入城市" bindinput="input" class="search_ipt" placeholder-style="color:{{color}};" />
+            <i class="icon-sousuo1 iconfont weizhi" bindtap="search"></i>
         </view>
-        <view class="msg">
-            <view>风力：{{wPower}}级</view>
-            <view>气压：{{kPa}}</view>
-        </view>
-        <!-- <view>经度：{{longitude}}</view>
+        <view class="today">
+            <!-- <view class="city">{{city}}天气预报</view> -->
+            <view class="temp">{{temperature}}°</view>
+            <view class="wStatus">{{wStatus}}</view>
+            <view class="msg">
+                <view>湿度：{{humidity}}%</view>
+                <view>风向：{{direct}}</view>
+            </view>
+            <view class="msg">
+                <view>风力：{{wPower}}级</view>
+                <view>气压：{{kPa}}</view>
+            </view>
+            <view class="nowtemp">今日最高/低温度：{{NowmaxTemp}} / {{NowminTemp}} °C</view>
+            <!-- <view>经度：{{longitude}}</view>
         <view>纬度：{{latitude}}</view> -->
+        </view>
     </view>
+
 
     <!-- 未来三天 -->
     <view class="foot" wx:if="{{isfoot}}" style="isfoot?'display:block;':'display:none;'">
+        <text class="fmsg">—— 未来三天预报 ——</text>
         <view class="feture">
-            <view wx:for="{{weather}}" wx:key='this'>
+            <view wx:for="{{weather}}" wx:key='this' class="fweather">
                 <view>{{item.day}}</view>
                 <view>{{item.wType}}</view>
-                <view>{{item.maxTemp}}/{{item.minTemp}}°C</view>                
+                <view>{{item.maxTemp}}/{{item.minTemp}}°C</view>
             </view>
         </view>
     </view>

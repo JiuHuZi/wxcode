@@ -5,7 +5,11 @@ const baseurl = 'https://devapi.qweather.com/v7/weather/7d?key=40d969fc118d41288
 const cityurl = 'https://geoapi.qweather.com/v2/city/lookup?key=40d969fc118d4128869ac0375e2e7aac&location='
 Page({
   data: {
+    color:'#fff',
+    changeimg: './img/day.png',
     isfoot: false,
+    NowmaxTemp: 0,
+    NowminTemp: 0,
     city: "",
     temperature: 0,
     direct: '-',
@@ -46,9 +50,10 @@ Page({
     })
   },
   search() {
+    let NowmaxTemp = this.data.NowmaxTemp;
+    let NowminTemp = this.data.NowminTemp;
     let isfoot = true;
     let city = this.data.city;
-    let cArr = [];
     const [adm, loc] = city.split(' ')
     let url = !loc ? `${cityurl}${adm}` : `${cityurl}${loc}&adm=${adm}`;
     let latitude = this.data.latitude;
@@ -67,6 +72,10 @@ Page({
           lat,
           lon
         } = e.data.location[0]
+        that.setData({
+          latitude: lat,
+          longitude: lon
+        })
 
         // 近7天天气
         wx.request({
@@ -81,7 +90,7 @@ Page({
               pressure,
               humidity,
               iconDay
-            } = e.data.daily[0]
+            } = e.data.daily
             let index = 0;
             for (var i = 1; i < 4; i++) {
               weather[index].day = e.data.daily[i].fxDate
@@ -91,8 +100,12 @@ Page({
               weather[index].ico = e.data.daily[i].iconDay
               index++
             }
+            NowmaxTemp = e.data.daily[0].tempMax
+            NowminTemp = e.data.daily[0].tempMin
             that.setData({
-              weather
+              weather,
+              NowminTemp,
+              NowmaxTemp
             })
           }
         })
@@ -120,10 +133,25 @@ Page({
             })
           }
         })
-
-      },
-
+      }
     })
-
+  },
+  onLoad() {
+    let changeimg = this.data.changeimg;
+    let txtcolor = this.data.color;
+    var myDate = new Date();
+    let date = myDate.getHours();
+    // console.log(date);
+    if (date >= 20) {
+      changeimg = './img/night.jpg';
+      txtcolor:'#fff';
+    }else{
+      changeimg = './img/day.png';
+      txtcolor:'#000';
+    }
+    this.setData({
+      changeimg,
+      color:txtcolor
+    })
   }
 })
