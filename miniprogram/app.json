@@ -16,7 +16,8 @@
         "pages/work8/xrld/xrld",
         "pages/work8/xxfg/xxfg",
         "pages/work7/index",
-        "pages/work9/index"
+        "pages/work9/index",
+        "pages/work11/index"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",
@@ -44,7 +45,7 @@
     },
     "permission": {
         "scope.userLocation": {
-            "desc": "小程序获取GPS坐标，请求天气预报"
+            "desc": "小程序获取GPS坐标"
         }
     }
 }

@@ -10,5 +10,6 @@
   <navigator class="com work7" url="/pages/work7/index"><i class="weather icon-tianqi-copy iconfont"></i><span>work7 天气预报</span><i class="end iconfont icon-jiantou1"></i></navigator>
   <navigator class="com work8" url="/pages/work8/index/index"><i class="diannao icon-xiangmujianshe iconfont"></i><span>work8 机电微官网</span><i class="end iconfont icon-jiantou1"></i></navigator>
   <navigator class="com work9" url="/pages/work9/index"><i class=" icon-xitongrizhi iconfont"></i><span>work9 记账本</span><i class="end iconfont icon-jiantou1"></i></navigator>
+  <navigator class="com work11" url="/pages/work11/index"><i class=" icon-xitongrizhi iconfont"></i><span>work11 阳光晨跑 </span><i class="end iconfont icon-jiantou1"></i></navigator>
   <navigator class="com test" url="/pages/test/test"><i class=" icon-xitongrizhi iconfont"></i><span>test 测试文件</span><i class="end iconfont icon-jiantou1"></i></navigator>
 </view>
