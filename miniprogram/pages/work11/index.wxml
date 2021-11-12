@@ -3,12 +3,12 @@
     <button type="primary" size="mini" bindtap="clear">清除数据</button>
     <button type="primary" size="mini" bindtap="save">保存数据</button>
     <button type="primary" size="mini" bindtap="playback">回放</button>
-    <button type="primary" size="mini" bindtap="test">test</button>
+    <button type="primary" size="mini" bindtap="record">test</button>
 </view>
 <view class="counter">
     <text>里程：{{mdl.formatKM(methers)}} 时间：{{mdl.formatTime(seconds)}}</text>
 </view>
-<map class="map" latitude="{{latitude}}" longitude="{{longitude}}" markers="markers" />
+<map class="map" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" />
 
 <wxs module="mdl">
     function formatTime(s) {
