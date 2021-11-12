@@ -1,0 +1,14 @@
+/* pages/work10/index.wxss */
+.intro{
+    font-size: 30rpx;
+    color: blue;
+    margin: 20rpx;
+}
+.menu{
+    display: flex;
+    margin: 20rpx;
+}
+.canva{
+    width: 100%;
+    height: 40vh;
+}

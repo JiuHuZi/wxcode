@@ -1,0 +1,12 @@
+<view class="intro">
+    <text>使用说明：打开图片，拖动手指在需要打马赛克的地方，保存后点击右上角假装分享给好友</text>
+</view>
+<view class="menu">
+    <button type="primary" size="mini" bindtap="open">打开</button>
+    <button type="primary" size="mini" bindtap="mosaic">打码</button>
+    <button type="primary" size="mini" bindtap="clear">清除</button>
+    <button type="primary" size="mini" bindtap="save">保存</button>
+    <button type="primary" size="mini" bindtap="seal">盖章</button>
+    <button type="primary" size="mini" bindtap="upload">上传</button>
+</view>
+<canvas class="canva" canvas-id="myCanvas" bindtouchmove="move"></canvas>
