@@ -25,7 +25,8 @@ Page({
         })
     },
     onLoad() {
-        this.curLocation()
+        this.curLocation(),
+        setInterval(this.record, this.data.interval)
     },
     test() {
         let dis = utils.getDistance(this.data.latitude, this.data.longitude, 23.383059, 113.44949)
@@ -37,6 +38,7 @@ Page({
         this.setData({
             running: !this.data.running
         })
+        
     },
     record() {
         if (!this.data.running) {
@@ -60,24 +62,31 @@ Page({
 
                 if (this.data.markers.length > 0) {
                     let lastmarker = this.data.markers.slice(-1)[0]
-                    // console.log(lastmarker);
-                    // console.log(newMarker);
+                    console.log(lastmarker);
+                    console.log(newMarker);
                     pace = utils.getDistance(lastmarker.latitude, lastmarker.longitude, newMarker.latitude, newMarker.longitude)
                     console.log(pace);
                     if (pace > 15) {
                         markers.push(newMarker)
-                    }else{
-                        pace = 10
+                    } else {
+                        pace = 0
                     }
-                }else{
+                } else {
                     markers.push(newMarker)
                 }
                 this.setData({
-                    latitude:res.latitude,
-                    longitude:res.longitude,
-                    markers:markers,
-                    methers:this.data.methers + pace
+                    latitude: res.latitude,
+                    longitude: res.longitude,
+                    markers: markers,
+                    methers: this.data.methers + pace
                 })
             })
+    },
+    clear() {
+        this.setData({
+            markers: [],
+            methers: 0,
+            seconds: 0
+        })
     }
 })
