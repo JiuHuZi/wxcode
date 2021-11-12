@@ -28,7 +28,7 @@
 
 
     <!-- 未来三天 -->
-    <view class="foot" wx:if="{{isfoot}}" style="isfoot?'display:block;':'display:none;'">
+    <view class="foot" wx:if="{{isfoot}}" style="display: {{isfoot?'block':'none'}};">
         <text class="fmsg">—— 未来三天预报 ——</text>
         <view class="feture">
             <view wx:for="{{weather}}" wx:key='this' class="fweather">
