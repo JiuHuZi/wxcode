@@ -1,4 +1,12 @@
 <view class="content">
+    <view class="section">
+        <view class="section__title">日期选择器</view>
+        <picker mode="date" value="{{time}}" start="2015-01" end="2030-12" bindchange="bindDateChange">
+            <view class="picker">
+                当前选择: {{time}}
+            </view>
+        </picker>
+    </view>
     <!-- tab -->
     <view class="nav">
         <view class="tab {{isincome?'selected':''}}" bindtap="click" data-name="income">
@@ -10,16 +18,22 @@
     </view>
     <!-- 金额列表 -->
     <view wx:if="{{isincome}}">
+        <view class="list income" wx:for="{{timelist}}" wx:key='this'>{{item}}</view>
         <view class="list income" wx:for="{{incomelist}}" wx:key='this'>{{item}}</view>
     </view>
     <view wx:else>
         <view class="list pay" wx:for="{{paylist}}" wx:key='this'>{{item}}</view>
     </view>
     <button class="button" bindtap="add" type="primary">增加</button>
-    <input type="text" confirm-type="done" wx:if="{{isinput}}" value="{{inputval}}" bindconfirm="confirm" placeholder="{{isincome?'收入':'支出'}}金额"/>
+    <input type="text" confirm-type="done" wx:if="{{isinput}}" value="{{inputval}}" bindconfirm="confirm"
+        placeholder="{{isincome?'收入':'支出'}}金额" />
 </view>
 <!-- 汇总 -->
 <view class="total">
-    收入：{{incometotal}}   支出：{{paytotal}}  余额：{{incometotal - paytotal}}
+    收入：{{incometotal}} 支出：{{paytotal}} 余额：{{incometotal - paytotal}}
 </view>
-<navigator url="/pages/work4/index">work4</navigator>
+
+
+
+
+<!-- <navigator url="/pages/work4/index">work4</navigator> -->

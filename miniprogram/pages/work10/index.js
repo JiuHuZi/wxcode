@@ -33,25 +33,25 @@ Page({
             ctx.setFillStyle('blue')
             ctx.fillRect(e.touches[0].x + 10, e.touches[0].y, 10, 10)
             ctx.fillRect(e.touches[0].x, e.touches[0].y + 10, 10, 10)
-        }else{
-            ctx.clearRect(e.touches[0].x,e.touches[0].y,20,20)
+        } else {
+            ctx.clearRect(e.touches[0].x, e.touches[0].y, 20, 20)
         }
         ctx.draw(true)
     },
-    save(){
+    save() {
         wx.canvasToTempFilePath({
-          canvasId: 'myCanvas',
+            canvasId: 'myCanvas',
         }).then(res => {
-            console.log('savefile:',res);
+            console.log('savefile:', res);
             this.setData({
-                imagePath:res.tempFilePath
+                imagePath: res.tempFilePath
             })
         })
     },
-    seal(){
+    seal() {
         ctx.setFillStyle('red')
         ctx.setFontSize(36)
-        ctx.fillText('07200903陈健生',0,200)
+        ctx.fillText('07200903陈健生', 0, 200)
         ctx.draw(true)
     }
 })

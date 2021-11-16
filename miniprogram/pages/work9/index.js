@@ -6,7 +6,9 @@ Page({
         incomelist: [],
         paylist: [],
         isinput: true,
-        inputval: ''
+        inputval: '',
+        time:'',
+        timelist: []
     },
     click(e) {
         console.log(e);
@@ -81,6 +83,16 @@ Page({
                 })
             }
         })
-
+    },
+    bindDateChange(e){
+        console.log(e);
+        let time = this.data.time;
+        let timelist = this.data.timelist;
+        time = e.detail.value;
+        timelist.push(time)
+        this.setData({
+            time,
+            timelist
+        })
     }
 })
