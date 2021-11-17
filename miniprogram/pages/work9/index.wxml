@@ -18,7 +18,7 @@
     </view>
     <!-- 金额列表 -->
     <view wx:if="{{isincome}}">
-        <view class="list income" wx:for="{{timelist}}" wx:key='this'>{{item}}</view>
+        <!-- <view class="list income" wx:for="{{timelist}}" wx:key='this'>{{item}}</view> -->
         <view class="list income" wx:for="{{incomelist}}" wx:key='this'>{{item}}</view>
     </view>
     <view wx:else>

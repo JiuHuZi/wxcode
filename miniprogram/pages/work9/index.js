@@ -32,11 +32,12 @@ Page({
         let money = Number(e.detail.value);
         let incomelist = this.data.incomelist;
         let paylist = this.data.paylist;
+        let time = this.data.time;
         if (this.data.isincome) {
-            incomelist.push(money)
+            incomelist.push(time,money)
             let incometotal = incomelist.reduce((sum, v) => {
                 return sum += v;
-            }, 0);
+            }, 1);
             this.setData({
                 incomelist,
                 incometotal,
