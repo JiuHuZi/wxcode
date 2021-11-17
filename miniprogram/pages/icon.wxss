@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2634811 */
-  src: url('//at.alicdn.com/t/font_2634811_6vq07p2flh6.woff2?t=1636040593489') format('woff2'),
-       url('//at.alicdn.com/t/font_2634811_6vq07p2flh6.woff?t=1636040593489') format('woff'),
-       url('//at.alicdn.com/t/font_2634811_6vq07p2flh6.ttf?t=1636040593489') format('truetype');
+  src: url('//at.alicdn.com/t/font_2634811_zlc0bt8yzz.woff2?t=1637153610760') format('woff2'),
+       url('//at.alicdn.com/t/font_2634811_zlc0bt8yzz.woff?t=1637153610760') format('woff'),
+       url('//at.alicdn.com/t/font_2634811_zlc0bt8yzz.ttf?t=1637153610760') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,18 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jizhangben:before {
+  content: "\e61c";
+}
+
+.icon-masaike:before {
+  content: "\e611";
+}
+
+.icon-fanshe:before {
+  content: "\ec50";
 }
 
 .icon-sousuo1:before {

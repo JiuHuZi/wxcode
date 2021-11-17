@@ -19,10 +19,10 @@
     <!-- 金额列表 -->
     <view wx:if="{{isincome}}">
         <!-- <view class="list income" wx:for="{{timelist}}" wx:key='this'>{{item}}</view> -->
-        <view class="list income" wx:for="{{incomelist}}" wx:key='this'>{{item}}</view>
+        <view class="list income" wx:for="{{incomelist}}" wx:key='this'>{{item[0]}}{{item[1]}}</view>
     </view>
     <view wx:else>
-        <view class="list pay" wx:for="{{paylist}}" wx:key='this'>{{item}}</view>
+        <view class="list pay" wx:for="{{paylist}}" wx:key='this'>{{item[0]}}{{item[1]}}</view>
     </view>
     <button class="button" bindtap="add" type="primary">增加</button>
     <input type="text" confirm-type="done" wx:if="{{isinput}}" value="{{inputval}}" bindconfirm="confirm"
@@ -36,4 +36,4 @@
 
 
 
-<!-- <navigator url="/pages/work4/index">work4</navigator> -->
+<navigator url="/pages/work4/index">work4</navigator>

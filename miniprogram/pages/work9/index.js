@@ -34,10 +34,14 @@ Page({
         let paylist = this.data.paylist;
         let time = this.data.time;
         if (this.data.isincome) {
-            incomelist.push(time,money)
+            incomelist.push([time,money])
             let incometotal = incomelist.reduce((sum, v) => {
-                return sum += v;
-            }, 1);
+                console.log(v);
+                
+                return sum += v[1];
+            }, 0);
+            console.log(incomelist);
+            
             this.setData({
                 incomelist,
                 incometotal,
@@ -45,9 +49,9 @@ Page({
                 isinput: false
             })
         } else {
-            paylist.push(money)
+            paylist.push([time,money])
             let paytotal = paylist.reduce((sum, v) => {
-                return sum += v
+                return sum += v[1]
             }, 0)
             this.setData({
                 paylist,
