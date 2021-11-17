@@ -7,7 +7,7 @@ Page({
         paylist: [],
         isinput: true,
         inputval: '',
-        time:'',
+        time:'选择日期：',
         timelist: []
     },
     click(e) {

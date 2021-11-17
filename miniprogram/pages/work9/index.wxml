@@ -1,39 +1,43 @@
+<view class="title"><span>月账单</span></view>
 <view class="content">
-    <view class="section">
-        <view class="section__title">日期选择器</view>
-        <picker mode="date" value="{{time}}" start="2015-01" end="2030-12" bindchange="bindDateChange">
-            <view class="picker">
-                当前选择: {{time}}
-            </view>
-        </picker>
-    </view>
     <!-- tab -->
     <view class="nav">
-        <view class="tab {{isincome?'selected':''}}" bindtap="click" data-name="income">
-            <text>收入</text>
+        <picker mode="date" value="{{time}}" start="2015-01" end="2030-12" bindchange="bindDateChange">
+            <view class="picker">
+                {{time}}
+            </view>
+        </picker>
+        <view class="chage">
+            <view class="tab {{isincome?'selected':''}}" bindtap="click" data-name="income">
+                <text>收入</text>
+            </view>
+            <view class="tab {{isincome?'':'selected'}}" bindtap="click" data-name="pay">
+                <text>支出</text>
+            </view>
         </view>
-        <view class="tab {{isincome?'':'selected'}}" bindtap="click" data-name="pay">
-            <text>支出</text>
-        </view>
     </view>
-    <!-- 金额列表 -->
-    <view wx:if="{{isincome}}">
-        <!-- <view class="list income" wx:for="{{timelist}}" wx:key='this'>{{item}}</view> -->
-        <view class="list income" wx:for="{{incomelist}}" wx:key='this'>{{item[0]}}{{item[1]}}</view>
+    <view class="balance">
+        <p class="balance_title">余额：</p>
+        <text>\n</text>
+        <p class="balance_money"><span style="font-size:30px;">￥</span>{{incometotal - paytotal}}</p>
     </view>
-    <view wx:else>
-        <view class="list pay" wx:for="{{paylist}}" wx:key='this'>{{item[0]}}{{item[1]}}</view>
+    <view class="total">
+        <span>总收入￥{{incometotal}} </span>
+        <span>总支出￥{{paytotal}}</span>
     </view>
-    <button class="button" bindtap="add" type="primary">增加</button>
-    <input type="text" confirm-type="done" wx:if="{{isinput}}" value="{{inputval}}" bindconfirm="confirm"
-        placeholder="{{isincome?'收入':'支出'}}金额" />
-</view>
-<!-- 汇总 -->
-<view class="total">
-    收入：{{incometotal}} 支出：{{paytotal}} 余额：{{incometotal - paytotal}}
 </view>
 
 
+<view wx:if="{{isincome}}">
+    <!-- <view class="list income" wx:for="{{timelist}}" wx:key='this'>{{item}}</view> -->
+    <view class="list income" wx:for="{{incomelist}}" wx:key='this'>{{item[0]}}{{item[1]}}</view>
+</view>
+<view wx:else>
+    <view class="list pay" wx:for="{{paylist}}" wx:key='this'>{{item[0]}}{{item[1]}}</view>
+</view>
+<button class="button" bindtap="add" type="primary">增加</button>
+<input type="text" confirm-type="done" wx:if="{{isinput}}" value="{{inputval}}" bindconfirm="confirm"
+    placeholder="{{isincome?'收入':'支出'}}金额" />
 
 
 <navigator url="/pages/work4/index">work4</navigator>

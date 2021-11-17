@@ -1,19 +1,60 @@
 .content{
     text-align: center;
-    margin: 58rpx;
+    /* margin: 58rpx; */
+    background-color: #3eb575;
+    position: relative;
+}
+.title{
+    color:#fff;
+    font-size: 30px;
+    background-color: #3eb575;
+    padding: 20px;
+    text-align: center;
+}
+.title span{
+    padding-bottom: 5px;
+    border-bottom: 3px solid #fff;
 }
 .nav{
     display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #fff;
+}
+.picker{
+    margin-left: 20px;
+}
+.chage{
+    width: 60%;
+    display: flex;
+    justify-content:flex-end;
 }
 .tab{
-    flex: 1;
-    font-size: 70rpx;
-    background-color: gray;
-    /* color: #fff; */
+    padding: 5px 10px 5px;
+    margin-left: 20px;
+    margin-top: -5px;
 }
 .selected{
-    background-color: red;
+    border: 1px solid #fff;
+    border-radius: 20px;
 }
+
+.balance{
+    margin-bottom: 20px;
+    display: flex;
+}
+.balance_title{
+    color: #eee;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.balance_money{
+    font-size: 60px;
+    color: #fff;
+    margin-left: -50px;
+    margin-top: 30px;
+}
+
 .list{
     border:1px solid #000;
     font-size: 50rpx;
@@ -29,9 +70,14 @@
     margin: 50rpx;
 }
 .total{
-    position:fixed;
-    bottom: 0;
-    width: 100%;
+    position: absolute;
+    bottom: 50%;
+    right: 5%;
+    /* width: 100%; */
     text-align: center;
-    font-size: 50rpx;
+    font-size: 30rpx;
+    color: #fff;
+}
+.total span{
+    margin-left: 20px;
 }
