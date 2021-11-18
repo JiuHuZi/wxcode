@@ -31,8 +31,8 @@
 <view class="monry_list" wx:if="{{isincome}}">
     <!-- <view class="list income" wx:for="{{timelist}}" wx:key='this'>{{item}}</view> -->
     <view style="margin-bottom:10px;">
-        <span style="float:left;margin-left:60px;">时间</span>
-        <span style="float:right;margin-right:60px;">金额</span>
+        <span style="float:left;margin-left:60px; border-bottom:3px solid #333; padding-bottom:5px;">时间</span>
+        <span style="float:right;margin-right:60px; border-bottom:3px solid #333; padding-bottom:5px;">金额</span>
         <text>\n</text>
     </view>
     <view class="list income" wx:for="{{incomelist}}" wx:key='this'>
@@ -43,8 +43,8 @@
 </view>
 <view  class="monry_list" wx:else>
     <view style="margin-bottom:10px;">
-        <span style="float:left;margin-left:60px;">时间</span>
-        <span style="float:right;margin-right:60px;">金额</span>
+        <span style="float:left;margin-left:60px; border-bottom:3px solid #333; padding-bottom:5px;">时间</span>
+        <span style="float:right;margin-right:60px; border-bottom:3px solid #333; padding-bottom:5px;">金额</span>
         <text>\n</text>
     </view>
     <view class="list pay" wx:for="{{paylist}}" wx:key='this'>
