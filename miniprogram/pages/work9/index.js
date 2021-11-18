@@ -41,7 +41,7 @@ Page({
                 return sum += v[1];
             }, 0);
             console.log(incomelist);
-            
+            incomelist.sort();
             this.setData({
                 incomelist,
                 incometotal,
