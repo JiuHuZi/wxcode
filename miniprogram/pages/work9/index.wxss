@@ -91,7 +91,7 @@
     background-color: #fff;
     position: fixed;
     top: 30%;
-    left: 20%;
+    left: 15%;
     border-radius: 20px;
 }
 .mod .text{
