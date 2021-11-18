@@ -28,16 +28,39 @@
 </view>
 
 
-<view wx:if="{{isincome}}">
+<view class="monry_list" wx:if="{{isincome}}">
     <!-- <view class="list income" wx:for="{{timelist}}" wx:key='this'>{{item}}</view> -->
-    <view class="list income" wx:for="{{incomelist}}" wx:key='this'>{{item[0]}}{{item[1]}}</view>
+    <view style="margin-bottom:10px;">
+        <span style="float:left;margin-left:60px;">时间</span>
+        <span style="float:right;margin-right:60px;">金额</span>
+        <text>\n</text>
+    </view>
+    <view class="list income" wx:for="{{incomelist}}" wx:key='this'>
+       <span style="float:left;margin-left:30px;">{{item[0]}}</span> 
+       <span style="float:right;margin-right:50px;">￥{{item[1]}}</span> 
+       <text>\n</text>
+    </view>
 </view>
-<view wx:else>
-    <view class="list pay" wx:for="{{paylist}}" wx:key='this'>{{item[0]}}{{item[1]}}</view>
+<view  class="monry_list" wx:else>
+    <view style="margin-bottom:10px;">
+        <span style="float:left;margin-left:60px;">时间</span>
+        <span style="float:right;margin-right:60px;">金额</span>
+        <text>\n</text>
+    </view>
+    <view class="list pay" wx:for="{{paylist}}" wx:key='this'>
+       <span style="float:left;margin-left:30px;">{{item[0]}}</span> 
+       <span style="float:right;margin-right:50px;">￥{{item[1]}}</span> 
+       <text>\n</text>
+    </view>
+    <!-- <view class="list pay" wx:for="{{paylist}}" wx:key='this'>{{item[0]}}{{item[1]}}</view> -->
 </view>
-<button class="button" bindtap="add" type="primary">增加</button>
-<input type="text" confirm-type="done" wx:if="{{isinput}}" value="{{inputval}}" bindconfirm="confirm"
-    placeholder="{{isincome?'收入':'支出'}}金额" />
+<button class="button" bindtap="add" type="primary">添加</button>
 
+<view wx:if="{{isinput}}" class="mod" >
+    <view class="text">{{isincome?'收入':'支出'}}金额</view>
+    <text>￥</text>
+    <input type="text" confirm-type="done" bindconfirm="confirm" class="money_ipt" placeholder="0" placeholder-style="color:#ccc;"/>
+    <button bindtap="add" type="primary" style="margin:20px 20px;">关闭</button>
+</view>
 
-<navigator url="/pages/work4/index">work4</navigator>
+<navigator class="url" url="/pages/work4/index">work4</navigator>

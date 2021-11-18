@@ -5,8 +5,8 @@ Page({
         isincome: true,
         incomelist: [],
         paylist: [],
-        isinput: true,
-        inputval: '',
+        isinput: false,
+        inputval:'',
         time:'选择日期：',
         timelist: []
     },
