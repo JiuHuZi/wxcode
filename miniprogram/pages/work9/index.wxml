@@ -25,8 +25,10 @@
         <span>总收入￥{{incometotal}} </span>
         <span>总支出￥{{paytotal}}</span>
     </view>
-    <view>
-        {{time}} 总收入{{Mintotal}}  总支出{{Mpaytotal}}
+    <view class="Mtotal" wx:if="ischange">
+        <span class="Mtime">{{time}}</span>
+        <span class="Min">总收入:￥{{Mintotal}}</span>
+        <span class="Mpay">总支出：￥{{Mpaytotal}}</span>   
     </view>
 </view>
 

@@ -97,7 +97,8 @@ Page({
                     incomelist: e.data[0],
                     paylist: e.data[1],
                     incometotal: e.data[2],
-                    paytotal: e.data[3]
+                    paytotal: e.data[3],
+                    ischange:false
                 })
             }
         })
