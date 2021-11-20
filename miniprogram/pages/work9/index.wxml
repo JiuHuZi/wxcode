@@ -1,4 +1,4 @@
-<view class="title"><span>账单</span></view>
+<view class="title"><span>月账单</span></view>
 <view class="content">
     <!-- tab -->
     <view class="nav">
