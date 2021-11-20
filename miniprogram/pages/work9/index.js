@@ -13,7 +13,8 @@ Page({
         monthPList: [],
         Mintotal: 0,
         Mpaytotal: 0,
-        ischange: true
+        ischange: false,
+        isshowMonth:false
     },
     click(e) {
         // console.log(e);
@@ -28,9 +29,13 @@ Page({
         }
     },
     add() {
+        let time = this.data.time;
+        time = '选择月份：'
         this.setData({
             isinput: !this.data.isinput,
-            ischange:false
+            ischange:true,
+            time,
+            isshowMonth:false
         })
     },
     confirm(e) {
@@ -98,7 +103,7 @@ Page({
                     paylist: e.data[1],
                     incometotal: e.data[2],
                     paytotal: e.data[3],
-                    ischange:false
+                    ischange:true
                 })
             }
         })
@@ -111,6 +116,7 @@ Page({
         time = e.detail.value;
         let monthMList = [];
         let monthPList = [];
+        // let isshowMonth = this.data.isshowMonth;
         for (let i = 0; i < incomelist.length; i++) {
             if (incomelist[i][0].split('-')[0] + '-' + incomelist[i][0].split('-')[1] == time) {
                 console.log('一样');
@@ -139,7 +145,8 @@ Page({
             monthPList,
             Mintotal,
             Mpaytotal,
-            ischange:true
+            ischange:false,
+            isshowMonth:true
         })
     },
     bindDayChange(e) {

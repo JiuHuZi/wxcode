@@ -25,7 +25,7 @@
         <span>总收入￥{{incometotal}} </span>
         <span>总支出￥{{paytotal}}</span>
     </view>
-    <view class="Mtotal" wx:if="ischange">
+    <view class="Mtotal" wx:if="{{isshowMonth}}">
         <span class="Mtime">{{time}}</span>
         <span class="Min">总收入:￥{{Mintotal}}</span>
         <span class="Mpay">总支出：￥{{Mpaytotal}}</span>   
@@ -34,13 +34,12 @@
 
 
 <view class="monry_list" wx:if="{{isincome}}">
-    <!-- <view class="list income" wx:for="{{timelist}}" wx:key='this'>{{item}}</view> -->
     <view style="margin-bottom:10px;">
         <span style="float:left;margin-left:60px; border-bottom:3px solid #333; padding-bottom:5px;">时间</span>
         <span style="float:right;margin-right:60px; border-bottom:3px solid #333; padding-bottom:5px;">金额</span>
         <text>\n</text>
     </view>
-    <view class="list income" wx:for="{{ischange?monthMList:incomelist}}" wx:key='this'>
+    <view class="list income" wx:for="{{ischange?incomelist:monthMList}}" wx:key='this'>
        <span style="float:left;margin-left:30px;">{{item[0]}}</span> 
        <span style="float:right;margin-right:50px;">￥{{item[1]}}</span> 
        <text>\n</text>
@@ -52,12 +51,11 @@
         <span style="float:right;margin-right:60px; border-bottom:3px solid #333; padding-bottom:5px;">金额</span>
         <text>\n</text>
     </view>
-    <view class="list pay" wx:for="{{ischange?monthPList:paylist}}" wx:key='this'>
+    <view class="list pay" wx:for="{{ischange?paylist:monthPList}}" wx:key='this'>
        <span style="float:left;margin-left:30px;">{{item[0]}}</span> 
        <span style="float:right;margin-right:50px;">￥{{item[1]}}</span> 
        <text>\n</text>
     </view>
-    <!-- <view class="list pay" wx:for="{{paylist}}" wx:key='this'>{{item[0]}}{{item[1]}}</view> -->
 </view>
 <button class="button" bindtap="add" type="primary">添加</button>
 
