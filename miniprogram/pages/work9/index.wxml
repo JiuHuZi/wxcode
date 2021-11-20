@@ -63,7 +63,7 @@
     <view class="text">{{isincome?'收入':'支出'}}金额</view>
     <view class="changeDay">
         <view class="changeTitle">选择日期：</view>
-        <picker mode="date" value="{{day}}" start="2015-01" end="2030-12" bindchange="bindDayChange">
+        <picker mode="date" value="{{day}}" start="2021-01-01" end="2999-12-01" bindchange="bindDayChange">
             <view class="picker">
                 {{day}}
             </view>
