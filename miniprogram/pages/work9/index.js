@@ -6,12 +6,17 @@ Page({
         incomelist: [],
         paylist: [],
         isinput: false,
-        inputval:'',
-        time:'选择日期：',
-        timelist: []
+        inputval: '',
+        time: '选择月份：',
+        day: '选择日期',
+        monthMList: [],
+        monthPList: [],
+        Mintotal: 0,
+        Mpaytotal: 0,
+        ischange: true
     },
     click(e) {
-        console.log(e);
+        // console.log(e);
         if (e.currentTarget.dataset.name == 'income') {
             this.setData({
                 isincome: true
@@ -24,7 +29,8 @@ Page({
     },
     add() {
         this.setData({
-            isinput: !this.data.isinput
+            isinput: !this.data.isinput,
+            ischange:false
         })
     },
     confirm(e) {
@@ -33,23 +39,29 @@ Page({
         let incomelist = this.data.incomelist;
         let paylist = this.data.paylist;
         let time = this.data.time;
+        let day = this.data.day;
+
         if (this.data.isincome) {
-            incomelist.push([time,money])
+            incomelist.push([day, money])
+
             let incometotal = incomelist.reduce((sum, v) => {
                 console.log(v);
-                
                 return sum += v[1];
             }, 0);
             console.log(incomelist);
             incomelist.sort();
+
             this.setData({
                 incomelist,
                 incometotal,
                 inputval: '',
-                isinput: false
+                isinput: false,
+                
             })
         } else {
-            paylist.push([time,money])
+            paylist.push([day, money])
+            // console.log(paylist);
+
             let paytotal = paylist.reduce((sum, v) => {
                 return sum += v[1]
             }, 0)
@@ -57,7 +69,8 @@ Page({
                 paylist,
                 inputval: '',
                 isinput: false,
-                paytotal
+                paytotal,
+                
             })
         }
     },
@@ -84,20 +97,56 @@ Page({
                     incomelist: e.data[0],
                     paylist: e.data[1],
                     incometotal: e.data[2],
-                    paytotal:e.data[3]
+                    paytotal: e.data[3]
                 })
             }
         })
     },
-    bindDateChange(e){
+    bindDateChange(e) {
         console.log(e);
         let time = this.data.time;
-        let timelist = this.data.timelist;
+        let incomelist = this.data.incomelist;
+        let paylist = this.data.paylist;
         time = e.detail.value;
-        timelist.push(time)
+        let monthMList = [];
+        let monthPList = [];
+        for (let i = 0; i < incomelist.length; i++) {
+            if (incomelist[i][0].split('-')[0] + '-' + incomelist[i][0].split('-')[1] == time) {
+                console.log('一样');
+                monthMList.push(incomelist[i]);
+            }
+            console.log(monthMList);
+        }
+        let Mintotal = monthMList.reduce((sum, v) => {
+            return sum += v[1]
+        }, 0)
+
+        for (let i = 0; i < paylist.length; i++) {
+            if (paylist[i][0].split('-')[0] + '-' + paylist[i][0].split('-')[1] == time) {
+                console.log('一样');
+                monthPList.push(paylist[i]);
+            }
+            console.log(monthPList);
+        }
+        let Mpaytotal = monthPList.reduce((sum, v) => {
+            return sum += v[1]
+        }, 0)
+
         this.setData({
             time,
-            timelist
+            monthMList,
+            monthPList,
+            Mintotal,
+            Mpaytotal,
+            ischange:true
+        })
+    },
+    bindDayChange(e) {
+        let day = this.data.day;
+        day = e.detail.value;
+        
+        this.setData({
+            day,
         })
     }
 })
