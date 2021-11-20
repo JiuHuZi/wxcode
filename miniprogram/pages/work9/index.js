@@ -8,7 +8,7 @@ Page({
         isinput: false,
         inputval: '',
         time: '选择月份：',
-        day: '选择日期',
+        day: '0-0-0',
         monthMList: [],
         monthPList: [],
         Mintotal: 0,

@@ -28,7 +28,7 @@
     <view class="Mtotal" wx:if="{{isshowMonth}}">
         <span class="Mtime">{{time}}</span>
         <span class="Min">总收入:￥{{Mintotal}}</span>
-        <span class="Mpay">总支出：￥{{Mpaytotal}}</span>   
+        <span class="Mpay">总支出：￥{{Mpaytotal}}</span>
     </view>
 </view>
 
@@ -40,34 +40,38 @@
         <text>\n</text>
     </view>
     <view class="list income" wx:for="{{ischange?incomelist:monthMList}}" wx:key='this'>
-       <span style="float:left;margin-left:30px;">{{item[0]}}</span> 
-       <span style="float:right;margin-right:50px;">￥{{item[1]}}</span> 
-       <text>\n</text>
+        <span style="float:left;margin-left:30px;">{{item[0]}}</span>
+        <span style="float:right;margin-right:50px;">￥{{item[1]}}</span>
+        <text>\n</text>
     </view>
 </view>
-<view  class="monry_list" wx:else>
+<view class="monry_list" wx:else>
     <view style="margin-bottom:10px;">
         <span style="float:left;margin-left:60px; border-bottom:3px solid #333; padding-bottom:5px;">时间</span>
         <span style="float:right;margin-right:60px; border-bottom:3px solid #333; padding-bottom:5px;">金额</span>
         <text>\n</text>
     </view>
     <view class="list pay" wx:for="{{ischange?paylist:monthPList}}" wx:key='this'>
-       <span style="float:left;margin-left:30px;">{{item[0]}}</span> 
-       <span style="float:right;margin-right:50px;">￥{{item[1]}}</span> 
-       <text>\n</text>
+        <span style="float:left;margin-left:30px;">{{item[0]}}</span>
+        <span style="float:right;margin-right:50px;">￥{{item[1]}}</span>
+        <text>\n</text>
     </view>
 </view>
 <button class="button" bindtap="add" type="primary">添加</button>
 
-<view wx:if="{{isinput}}" class="mod" >
+<view wx:if="{{isinput}}" class="mod">
     <view class="text">{{isincome?'收入':'支出'}}金额</view>
-    <picker mode="date" value="{{day}}" start="2015-01" end="2030-12" bindchange="bindDayChange">
+    <view class="changeDay">
+        <view class="changeTitle">选择日期：</view>
+        <picker mode="date" value="{{day}}" start="2015-01" end="2030-12" bindchange="bindDayChange">
             <view class="picker">
                 {{day}}
             </view>
         </picker>
+    </view>
     <text>￥</text>
-    <input type="text" confirm-type="done" bindconfirm="confirm" class="money_ipt" placeholder="0" placeholder-style="color:#ccc;"/>
+    <input type="text" confirm-type="done" bindconfirm="confirm" class="money_ipt" placeholder="0"
+        placeholder-style="color:#ccc;" />
     <button bindtap="add" type="primary" style="margin:20px 20px;">关闭</button>
 </view>
 

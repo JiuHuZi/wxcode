@@ -93,6 +93,7 @@
     top: 30%;
     left: 15%;
     border-radius: 20px;
+    box-shadow: 15px 5px 35px rgba(0, 0, 0, .7);
 }
 .mod .text{
     text-align: center;
@@ -121,4 +122,34 @@
 }
 .Mtotal span{
     margin-right: 20px;
+}
+.changeDay{
+    width: 80%;
+    height: 20px;
+    border: 1px solid #000;
+    display: flex;
+    border-radius: 30px;
+    margin: 20px auto;
+    padding: 10px;
+    overflow: hidden;
+}
+.changeDay>.picker{
+    font-size: 20px;
+    line-height: 20px;
+}
+.changeDay picker{
+    width: 65%;
+}
+.changeTitle{
+    width: 35%;
+    height: 20px;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    margin-top: -10px;
+    margin-left: -10px;
+    padding: 10px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    font-size: 14px;
 }
