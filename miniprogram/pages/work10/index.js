@@ -43,9 +43,26 @@ Page({
             canvasId: 'myCanvas',
         }).then(res => {
             console.log('savefile:', res);
-            this.setData({
-                imagePath: res.tempFilePath
+            wx.saveImageToPhotosAlbum({
+              filePath: res.tempFilePath,
+              success(res){
+                  wx.showToast({
+                    title: '保存成功',
+                    duration: 2000,
+                    icon: 'success',
+                  })
+              },
+              fail(res){
+                wx.showToast({
+                    title: '保存失败',
+                    duration: 2000,
+                  })
+              }
             })
+
+            // this.setData({
+            //     imagePath: res.tempFilePath
+            // })
         })
     },
     seal() {
