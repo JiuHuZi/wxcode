@@ -1,0 +1,16 @@
+/* pages/work12/index.wxss */
+.content {
+  margin: 20rpx;
+}
+
+label {
+  display: flex;
+}
+
+input {
+  border-bottom: 1px solid #369;
+}
+
+textarea {
+  border: 1px solid #369;
+}

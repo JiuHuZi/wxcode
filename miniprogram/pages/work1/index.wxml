@@ -12,5 +12,6 @@
   <navigator class="com work9" url="/pages/work9/index"><i class="guitar icon-jizhangben iconfont"></i><span>work9 记账本</span><i class="end iconfont icon-jiantou1"></i></navigator>
   <navigator class="com work10" url="/pages/work10/index"><i class=" icon-masaike iconfont"></i><span>work10 趣味马赛克</span><i class="end iconfont icon-jiantou1"></i></navigator>
   <navigator class="com work11" url="/pages/work11/index"><i class=" icon-fanshe iconfont"></i><span>work11 阳光晨跑 </span><i class="end iconfont icon-jiantou1"></i></navigator>
+  <navigator class="com test" url="/pages/work12/index"><i class=" icon-xitongrizhi iconfont"></i><span>work12 教学满意度评测</span><i class="end iconfont icon-jiantou1"></i></navigator>
   <navigator class="com test" url="/pages/test/test"><i class=" icon-xitongrizhi iconfont"></i><span>test 测试文件</span><i class="end iconfont icon-jiantou1"></i></navigator>
 </view>

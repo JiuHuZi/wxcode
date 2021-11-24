@@ -1,48 +1,48 @@
 {
-    "setting": {},
-    "condition": {
-        "plugin": {
-            "list": []
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
         },
-        "game": {
-            "list": []
+        {
+          "name": "pages/work10/index",
+          "pathName": "pages/work10/index",
+          "query": "",
+          "scene": null
         },
-        "gamePlugin": {
-            "list": []
+        {
+          "name": "pages/work9/index",
+          "pathName": "pages/work9/index",
+          "query": "",
+          "scene": null
         },
-        "miniprogram": {
-            "list": [
-                {
-                    "id": -1,
-                    "name": "db guide",
-                    "pathName": "pages/databaseGuide/databaseGuide",
-                    "query": ""
-                },
-                {
-                    "name": "pages/work10/index",
-                    "pathName": "pages/work10/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/work9/index",
-                    "pathName": "pages/work9/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/work7/index",
-                    "pathName": "pages/work7/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/work11/index",
-                    "pathName": "pages/work11/index",
-                    "query": "",
-                    "scene": null
-                }
-            ]
+        {
+          "name": "pages/work12/index",
+          "pathName": "pages/work12/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/work11/index",
+          "pathName": "pages/work11/index",
+          "query": "",
+          "scene": null
         }
+      ]
     }
+  }
 }
