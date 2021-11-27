@@ -32,41 +32,9 @@
   <view class="content-info-list">
     <view class="list-title">热门歌曲</view>
     <view class="list-inner">
-      <view class="list-item">
-        <image src="images/cover.jpg" />
-        <view>歌曲1</view>
-      </view>
-      <view class="list-item">
-        <image src="images/cover.jpg" />
-        <view>歌曲2</view>
-      </view>
-      <view class="list-item">
-        <image src="images/cover.jpg" />
-        <view>歌曲3</view>
-      </view>
-      <view class="list-item">
-        <image src="images/cover.jpg" />
-        <view>歌曲4</view>
-      </view>
-      <view class="list-item">
-        <image src="images/cover.jpg" />
-        <view>歌曲5</view>
-      </view>
-      <view class="list-item">
-        <image src="images/cover.jpg" />
-        <view>歌曲6</view>
-      </view>
-      <view class="list-item">
-        <image src="images/cover.jpg" />
-        <view>歌曲7</view>
-      </view>
-      <view class="list-item">
-        <image src="images/cover.jpg" />
-        <view>歌曲8</view>
-      </view>
-      <view class="list-item">
-        <image src="images/cover.jpg" />
-        <view>歌曲9</view>
+      <view class="list-item" wx:for="{{mRandomList}}">
+        <image src="{{item.coverImg}}" />
+        <view>{{item.title}}</view>
       </view>
     </view>
   </view>

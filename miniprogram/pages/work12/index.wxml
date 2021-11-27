@@ -30,7 +30,7 @@
     </view>
     <view>
       <text>教学满意度{{satisfaction}}</text>
-      <slider name="satisfaction" show-value min="0" max="5" value="5"></slider>
+      <slider name="satisfaction" show-value min="0" max="5" value="5" bindchange="change"></slider>
     </view>
     <view>
       <text>意见和建议</text>

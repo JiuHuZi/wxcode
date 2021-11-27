@@ -14,13 +14,33 @@ Page({
       title: '',
       singer: '',
       coverImg: '',
-    }
+    },
+    mRandomList:[]
   },
   onLoad() {
+    let mRandomList = this.data.mRandomList;
+    let randomlist = []
     ml.get().then(res => {
       console.log(res);
+      
+      
+      for(let i = 0;i<res.data.length;i++){
+        let index = Math.round(Math.random() * 11);
+        if(randomlist.indexOf(index) != -1){
+          i--
+          continue
+        }
+        randomlist.push(index);
+      }
+      console.log(randomlist);
+      for(let j = 0;j < randomlist.length;j++){
+        mRandomList.push(res.data[randomlist[j]])
+      }
+      console.log(mRandomList);
+      
       this.setData({
         musiclist: res.data,
+        mRandomList
       })
       this.selectMusic(0)
     })
@@ -95,5 +115,11 @@ Page({
     console.log(e);
     this.selectMusic(e.currentTarget.dataset.index)
     this.play()
-  }
+  },
+  changeTime(e) {
+    let that = this
+    var second = e.detail.value * that.data.play.duration / 100
+    audioCtx.seek(second)
+  },
+
 })
