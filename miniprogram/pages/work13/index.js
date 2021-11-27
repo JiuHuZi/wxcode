@@ -33,7 +33,7 @@ Page({
         randomlist.push(index);
       }
       console.log(randomlist);
-      for(let j = 0;j < randomlist.length;j++){
+      for(let j = 0;j < 9;j++){
         mRandomList.push(res.data[randomlist[j]])
       }
       console.log(mRandomList);
