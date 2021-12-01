@@ -1,0 +1,54 @@
+<view class="content">
+  <view class="top">
+    <view class="search">
+      <icon type="search" color="#ccc" size="20px" style="padding-top:10rpx;padding-left: 10rpx;"></icon>
+      <input type="text" class="searchIpt" />
+    </view>
+  </view>
+
+  <view class="contentView">
+    <view class="group">电影</view>
+    <scroll-view scroll-x="true">
+      <view class="movielist">
+        <view class="movie" wx:for="{{movielist}}" wx:key="this">
+          <navigator url="detail/detail?type=movie&id={{item.id}}">
+            <image class="cover" src="{{item.cover.url}}" />
+            <view class="mtitle">{{item.title}}</view>
+            <mystar stars="{{item.rating.value}}"></mystar>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="contentView">
+    <view class="group">电视剧</view>
+    <scroll-view scroll-x="true">
+      <view class="movielist">
+        <view class="movie" wx:for="{{dsjlist}}" wx:key="this">
+          <navigator url="detail/detail?type=tv&id={{item.id}}">
+            <image class="cover" src="{{item.cover.url}}" />
+            <view class="mtitle">{{item.title}}</view>
+            <mystar stars="{{item.rating.value}}"></mystar>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="contentView">
+    <view class="group">综艺</view>
+    <scroll-view scroll-x="true">
+      <view class="movielist">
+        <view class="movie" wx:for="{{zylist}}" wx:key="this">
+          <navigator url="detail/detail?type=tv&id={{item.id}}">
+            <image class="cover" src="{{item.cover.url}}" />
+            <view class="mtitle">{{item.title}}</view>
+            <mystar stars="{{item.rating.value}}"></mystar>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+</view>

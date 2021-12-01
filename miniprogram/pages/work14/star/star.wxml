@@ -1,0 +1,6 @@
+<view class="starlist">
+  <image wx:for="{{fstar}}" wx:key="this" src="img/fullstar.png" />
+  <image wx:if="{{hstar}}" wx:key="this" src="img/halfstar.png" />
+  <image wx:for="{{estar}}" wx:key="this" src="img/emptystar.png" />
+  <text class="ratingValue" wx:if="{{show}}">{{stars}}</text>
+</view>

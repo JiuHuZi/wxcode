@@ -1,0 +1,72 @@
+/* Pages/detail/detail.wxss */
+.content{
+  margin: 20rpx;
+}
+.title{
+  font-size: 80rpx;
+}
+.nr{
+  display: flex;
+}
+.nrwz{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.star{
+  display: flex;
+  margin-bottom: 20px;
+}
+.pCount{
+  margin-left: 10px;
+  line-height: 17px;
+  color: gray;
+}
+.cover{
+  width: 260rpx;
+  height: 400rpx;
+}
+.bq{
+  width: 100%;
+  overflow: hidden;
+}
+.bqtitle{
+  margin-top: 30rpx;
+  font-size: 18px;
+  color: gray;
+}
+.tags{
+  margin: 10rpx 30rpx;
+  padding: 15rpx;
+  background-color: #ddd;
+  border-radius: 40rpx;
+  float: left;
+}
+.dpitem{
+  margin: 10rpx 0;
+}
+.avatar{
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  float: left;
+}
+.comment{
+  margin-left: 50px;
+}
+.nickname{
+  display: flex;
+}
+.dpstar{
+  margin-left: 10px;
+}
+.dpCount{
+  margin: 20px 0;
+  color: gray;
+}
+.dpname{
+  line-height: 20px;
+}
+.dpTime{
+  margin: 10rpx 0;
+  color: gray;
+}

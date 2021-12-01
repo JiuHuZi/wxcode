@@ -1,0 +1,62 @@
+/* Pages/index.wxss */
+.top {
+  padding: 20rpx;
+  background-color: #41be57;
+  width: 100%;
+}
+
+.search {
+  display: flex;
+  background-color: #fff;
+  margin-right: 20px;
+  height: 30px;
+  border-radius: 10rpx;
+}
+
+.searchIpt {
+  width: 100%;
+  line-height: 30px;
+  font-size: 20px;
+  height: 30px;
+}
+
+.group {
+  font-size: 1.4em;
+  margin: 10rpx;
+  color: gray;
+}
+
+scroll-view {
+  height: 450rpx;
+}
+
+.movielist {
+  display: flex;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx;
+  align-items: center;
+}
+
+.cover {
+  width: 230rpx;
+  height: 320rpx;
+  border-radius: 20rpx;
+}
+
+.mtitle {
+  font-size: 14px;
+  margin: 10rpx 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 230rpx;
+}
+
+.contentView {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}

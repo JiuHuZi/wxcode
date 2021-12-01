@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "star":"../star/star"
+  },
+  "navigationBarBackgroundColor": "#41be57",
+  "navigationBarTitleText": "豆瓣评分",
+  "navigationBarTextStyle": "white"
+}

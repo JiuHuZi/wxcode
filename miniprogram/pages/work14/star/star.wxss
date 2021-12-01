@@ -1,0 +1,14 @@
+/* Pages/star/star.wxss */
+.starlist {
+  display: flex;
+}
+
+.starlist image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.ratingValue{
+  color: orange;
+  line-height: 30rpx;
+  margin-left: 5rpx;
+}
