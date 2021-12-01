@@ -24,7 +24,7 @@
 
   <view class="dpCount">短评 ({{dp.total}})</view>
   <view class="dp">
-    <view class="dpitem" wx:for="{{dp.iinterest}}" wx:key="this">
+    <view class="dpitem" wx:for="{{dp.iinterest || dp.interests}}" wx:key="this">
       <image class="avatar" src="{{item.user.avatar}}" />
       <view class="comment">
         <view class="nickname">
