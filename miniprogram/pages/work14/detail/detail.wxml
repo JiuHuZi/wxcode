@@ -10,7 +10,7 @@
           <view class="pCount">{{xq.rratin.count}}人评价</view>
         </view>
         <view>{{xq.durations[0]}} {{mygenres}}</view>
-        <view>{{xq.pubdate[0]}}</view>
+        <view>{{xq.ppubdat[0]}}</view>
         <view>{{xq.ddirector[0].name}}导演</view>
         <view>{{myactors}}</view>
       </view>
