@@ -11,12 +11,15 @@
     <navigator class="itemNav" url="../detail/detail?type={{item.target_type}}&id={{item.target.id}}">
       <image class="itemImg" src="{{item.target.cover_url}}" />
       <view class="itemMsg">
-        <view>{{item.target.title}}</view>
+        <view class="itemTitle">{{item.target.title}}</view>
         <view class="star">
           <star class="nrstar" stars="{{item.target.rating.value}}"></star>
         </view>
-        <view>{{item.type_name}}</view>
-        <view>{{item.target.card_subtitle}}</view>
+        <view class="itemTags">
+          <view class="itemTagsLab">{{item.type_name}}</view>
+          <view>{{item.target.card_subtitle}}</view>
+        </view>
+        
       </view>
     </navigator>
   </view>

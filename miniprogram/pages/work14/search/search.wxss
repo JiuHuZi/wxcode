@@ -22,17 +22,40 @@
 
 .itemNav{
   margin: 20px;
+  box-sizing: border-box;
+  display: flex;
 }
 
 .itemImg{
-  width: 230rpx;
-  height: 220rpx;
+  width: 30vw;
+  height: 260rpx;
   border-radius: 20rpx;
   margin-right: 20px;
-  float: left;
 }
 .itemMsg{
+  width: 70vw;
   border-bottom: 1px solid #000;
-  padding-bottom:10rpx ;
+  padding-bottom:10px ;
+}
+.itemTitle{
+  font-weight: bold;
+  font-size: 20px;
+}
+.star{
+  margin-top: 6px;
+}
+.star--ratingValue{
+  color:gray !important;
 }
 
+.itemTagsLab{
+  background-color: #eee;
+  border-radius: 10rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+.itemTags{
+  color: gray;
+  margin-top: 8px;
+  font-size: 14px;
+}
