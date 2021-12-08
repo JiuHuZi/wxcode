@@ -53,6 +53,12 @@
           "pathName": "pages/work14/detail/detail",
           "query": "type=movie&id=30176790",
           "scene": null
+        },
+        {
+          "name": "pages/work14/search/search",
+          "pathName": "pages/work14/search/search",
+          "query": "title=%E6%9D%80%E6%89%8B",
+          "scene": null
         }
       ]
     }

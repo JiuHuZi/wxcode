@@ -7,7 +7,11 @@ Component({
     show:{
       type:Boolean,
       value:true
-    }
+    },
+    // displayNum:{
+    //   type:Boolean,
+    //   value:0
+    // }
   },
   lifetimes: {
     attached() {

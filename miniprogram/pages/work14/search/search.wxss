@@ -1,0 +1,38 @@
+/* pages/work14/search/search.wxss */
+.top {
+  padding: 20rpx;
+  background-color: #41be57;
+  width: 100%;
+}
+
+.search {
+  display: flex;
+  background-color: #fff;
+  margin-right: 20px;
+  height: 30px;
+  border-radius: 10rpx;
+}
+
+.searchIpt {
+  width: 100%;
+  line-height: 30px;
+  font-size: 20px;
+  height: 30px;
+}
+
+.itemNav{
+  margin: 20px;
+}
+
+.itemImg{
+  width: 230rpx;
+  height: 220rpx;
+  border-radius: 20rpx;
+  margin-right: 20px;
+  float: left;
+}
+.itemMsg{
+  border-bottom: 1px solid #000;
+  padding-bottom:10rpx ;
+}
+

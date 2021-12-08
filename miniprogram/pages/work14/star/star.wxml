@@ -3,4 +3,12 @@
   <image wx:if="{{hstar}}" wx:key="this" src="img/halfstar.png" />
   <image wx:for="{{estar}}" wx:key="this" src="img/emptystar.png" />
   <text class="ratingValue" wx:if="{{show}}">{{stars}}</text>
+
+<!-- 
+  <image wx:for="{{stars/2-stars/2%1}}" wx:key="this" src="img/fullstar.png" />
+  <image wx:if="{{stars%2>0?1:0}}" wx:key="this" src="img/halfstar.png" />
+  <image wx:for="{{5-stars/2+stars/2%1-(stars>0?1:0)}}" wx:key="this" src="img/emptystar.png" />
+  <text class="ratingValue" wx:if="{{displayNum}}">{{stars}}</text> -->
+
+
 </view>

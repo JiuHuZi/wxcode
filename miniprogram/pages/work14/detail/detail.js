@@ -1,8 +1,8 @@
-const xq = 'https://vue3antdv-7gcma6b228a5b287-1256680780.tcloudbaseapp.com/api/v2/'
+const xq = 'https://m.douban.com/rexxar/api/v2/'
 //  /tags?count=8
-const bq = 'https://vue3antdv-7gcma6b228a5b287-1256680780.tcloudbaseapp.com/api/v2/'
+const bq = 'https://m.douban.com/rexxar/api/v2/'
 // querystring : count=5&start=1
-const dp = 'https://vue3antdv-7gcma6b228a5b287-1256680780.tcloudbaseapp.com/api/v2/'
+const dp = 'https://m.douban.com/rexxar/api/v2/'
 const count = 5;
 Page({
   data: {
@@ -13,7 +13,6 @@ Page({
   },
   onLoad(option) {
     console.log(option);
-    let bqlist = this.data.bqlist;
     let {
       type,
       id
@@ -44,12 +43,8 @@ Page({
       url: bq + option.type + '/' + option.id + '/tags?count=8',
       success: res => {
         console.log(res);
-        for(let i = 0;i<5;i++){
-          bqlist.push(res.data.ttag[i])
-        }
         this.setData({
-          bq: res.data,
-          bqlist
+          bq: res.data
         })
       }
     })
@@ -58,7 +53,6 @@ Page({
       url: dp + option.type + '/' + option.id + '/interests?count=5',
       success: res => {
         console.log(res);
-        
         this.setData({
           dp: res.data,
         })

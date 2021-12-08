@@ -22,7 +22,8 @@
     "pages/work13/index",
     "pages/work12/index",
     "pages/work14/index",
-    "pages/work14/detail/detail"
+    "pages/work14/detail/detail",
+    "pages/work14/search/search"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

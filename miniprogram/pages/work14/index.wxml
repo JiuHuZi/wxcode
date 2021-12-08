@@ -1,8 +1,8 @@
 <view class="content">
   <view class="top">
     <view class="search">
-      <icon type="search" color="#ccc" size="20px" style="padding-top:10rpx;padding-left: 10rpx;"></icon>
-      <input type="text" class="searchIpt" />
+      <icon type="search" color="#ccc" size="20px" style="padding-top:10rpx;padding-left: 10rpx;" bindtap="search"></icon>
+      <input type="text" class="searchIpt"  bindinput="input"/>
     </view>
   </view>
 

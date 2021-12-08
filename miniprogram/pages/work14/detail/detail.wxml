@@ -1,17 +1,16 @@
 <view class="content">
   <view class="xq">
-    <view class="title" wx:if="{{xq.ttitl != null}}">{{xq.ttitl}}</view>
-    <view class="title" wx:else>{{xq.aka[0]}}</view>
+    <view class="title">{{xq.title}}</view>
     <view class="nr">
-      <image class="cover" src="{{xq.ccover.image.small.url}}" />
+      <image class="cover" src="{{xq.cover.image.small.url}}" />
       <view class="nrwz">
         <view class="star">
-          <star class="nrstar" stars="{{xq.rratin.value}}" wx:if="{{xq}}"></star>
-          <view class="pCount">{{xq.rratin.count}}人评价</view>
+          <star class="nrstar" stars="{{xq.rating.value}}" wx:if="{{xq}}"></star>
+          <view class="pCount">{{xq.rating.count}}人评价</view>
         </view>
         <view>{{xq.durations[0]}} {{mygenres}}</view>
-        <view>{{xq.ppubdat[0]}}</view>
-        <view>{{xq.ddirector[0].name}}导演</view>
+        <view>{{xq.pubdate[0]}}</view>
+        <view>{{xq.directors[0].name}}导演</view>
         <view>{{myactors}}</view>
       </view>
     </view>
@@ -19,12 +18,12 @@
 
   <view class="bq">
     <view class="bqtitle">豆瓣成员常用标签</view>
-    <text class="tags" wx:for="{{bqlist}}" wx:key="this">{{item}}</text>
+    <text class="tags" wx:for="{{bq.tags}}" wx:key="this">{{item}}</text>
   </view>
 
   <view class="dpCount">短评 ({{dp.total}})</view>
   <view class="dp">
-    <view class="dpitem" wx:for="{{dp.iinterest || dp.interests}}" wx:key="this">
+    <view class="dpitem" wx:for="{{dp.interests}}" wx:key="this">
       <image class="avatar" src="{{item.user.avatar}}" />
       <view class="comment">
         <view class="nickname">

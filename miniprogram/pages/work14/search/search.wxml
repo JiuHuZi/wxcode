@@ -1,0 +1,23 @@
+<view class="content">
+  <view class="top">
+    <view class="search">
+      <icon type="search" color="#ccc" size="20px" style="padding-top:10rpx;padding-left: 10rpx;" bindtap="search">
+      </icon>
+      <input type="text" class="searchIpt" bindinput="input" value="{{title}}" />
+    </view>
+  </view>
+
+  <view wx:for="{{result.subjects.items}}" >
+    <navigator class="itemNav" url="../detail/detail?type={{item.target_type}}&id={{item.target.id}}">
+      <image class="itemImg" src="{{item.target.cover_url}}" />
+      <view class="itemMsg">
+        <view>{{item.target.title}}</view>
+        <view class="star">
+          <star class="nrstar" stars="{{item.target.rating.value}}"></star>
+        </view>
+        <view>{{item.type_name}}</view>
+        <view>{{item.target.card_subtitle}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
