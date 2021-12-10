@@ -34,7 +34,7 @@
 }
 .itemMsg{
   width: 70vw;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #ccc;
   padding-bottom:10px ;
 }
 .itemTitle{
@@ -49,7 +49,7 @@
 }
 
 .itemTagsLab{
-  background-color: #eee;
+  background-color: #ddd;
   border-radius: 10rpx;
   float: left;
   margin-right: 20rpx;
