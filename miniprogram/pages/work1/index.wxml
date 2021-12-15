@@ -32,6 +32,8 @@
       音乐播放器</span><i class="end iconfont icon-jiantou1"></i></navigator>
   <navigator class="com test" url="/pages/work14/index"><i class="douban icon-douban1 iconfont"></i><span>work14
       豆瓣</span><i class="end iconfont icon-jiantou1"></i></navigator>
+  <navigator class="com test" url="/pages/work15/index"><i class=" icon-xitongrizhi iconfont"></i><span>work15 图片投票</span><i
+      class="end iconfont icon-jiantou1"></i></navigator>
   <navigator class="com test" url="/pages/test/test"><i class=" icon-xitongrizhi iconfont"></i><span>test 测试文件</span><i
       class="end iconfont icon-jiantou1"></i></navigator>
 </view>
