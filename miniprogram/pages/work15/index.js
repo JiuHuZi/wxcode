@@ -14,18 +14,7 @@ Page({
     let plist = res.data
     res = await votes.get()
     let vlist = res.data
-    plist.forEach(v => {
-      // 为plist的数据加上一个count来记录票数
-      v.count = 0,
-      v.border = false,
-        // 判断点击的图片是哪一张为其的count加一
-        vlist.forEach(vv => {
-            if (vv.fileid == v.fileid) {
-              v.count += 1;
-              v.border = true
-            }
-        })
-    })
+    
 
     // 调用云函数login
     res = await wx.cloud.callFunction({
@@ -46,6 +35,18 @@ Page({
       console.log(votesum);
 
 
+    })
+    plist.forEach(v => {
+      // 为plist的数据加上一个count来记录票数
+      v.count = 0,
+      v.border = false,
+        // 判断点击的图片是哪一张为其的count加一
+        vlist.forEach(vv => {
+            if (vv.fileid == v.fileid) {
+              v.count += 1;
+              v.border = true
+            }
+        })
     })
     this.setData({
       voted,
@@ -153,7 +154,6 @@ Page({
   async tap(e) {
     console.log(e);
     // 如果voted的值是true就显示“已投过票不能再投”后终止向下继续执行
-
     if (this.data.votesum >= 3) {
       wx.showToast({
         title: '超过投票次数',
