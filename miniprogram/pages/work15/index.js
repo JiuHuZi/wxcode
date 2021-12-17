@@ -4,14 +4,44 @@ const db = wx.cloud.database();
 const pics = db.collection('pics');
 // 链接votes集合
 const votes = db.collection('votes');
+const $ = db.command.aggregate
 Page({
-  onLoad() {
-    pics.get().then(res => {
-      console.log(res);
-      this.setData({
-        plist: res.data
+  async onLoad(option) {
+    let res = await pics.get();
+    let plist = res.data
+    res = await votes.get()
+    let vlist = res.data
+
+    plist.forEach(v => {
+      // 为plist的数据加上一个count来记录票数
+      v.count = 0
+      // 判断点击的图片是哪一张为其的count加一
+      vlist.forEach(vv => {
+        if (vv.fileid == v.fileid) {
+          v.count += 1
+        }
       })
     })
+
+    this.setData({
+      plist,
+      vlist
+    })
+
+    // 查找投的是哪一张图片查找他的current
+    if (option.fileid) {
+      let current = plist.findIndex(v => {
+        return v.fileid == option.fileid
+      })
+      // 将找到的current发送给setTitleBar方法
+      this.setTitleBar(current)
+      this.setData({
+        current
+      })
+    } else {
+      // 找不到就跳到第0页
+      this.setTitleBar(0)
+    }
   },
   // long() {
   //   // 打开相册
@@ -77,14 +107,53 @@ Page({
       }
     })
     if (res.errMsg.indexOf('ok') > -1) {
-      wx.showToast({
+      await wx.showToast({
         title: '图片上传成功',
       })
     } else {
-      wx.showToast({
+      await wx.showToast({
         icon: 'error',
         title: '图片上传失败',
       })
     }
+    // 上传完图片就跳转到上传的那张图片的位置
+    wx.reLaunch({
+      url: '/pages/work15/index?fileid=' + fileid,
+    })
+  },
+  async tap(e) {
+    console.log(e);
+    let fileid = e.currentTarget.dataset.id;
+    let res = await votes.add({
+      data: {
+        fileid,
+        data: db.serverDate()
+      }
+    })
+    console.log(res);
+    if (res.errMsg.indexOf('ok') > -1) {
+      wx.showToast({
+        title: '投票成功',
+      })
+    } else {
+      wx.showToast({
+        icon: 'error',
+        title: '投票失败',
+      })
+    }
+    // 投完票就跳转到投的那张图片的位置
+    wx.reLaunch({
+      url: '/pages/work15/index?fileid=' + fileid,
+    })
+  },
+  setTitleBar(current) {
+    // 设置小程序标题为某一张多少票
+    wx.setNavigationBarTitle({
+      title: current + 1 + '/' + this.data.plist.length + '  ' + this.data.plist[current].count + '票'
+    })
+  },
+  change(e) {
+    console.log(e);
+    this.setTitleBar(e.detail.current)
   }
 })
