@@ -6,6 +6,9 @@ const pics = db.collection('pics');
 const votes = db.collection('votes');
 const $ = db.command.aggregate
 Page({
+  data:{
+    maxvote:3,
+  },
   async onLoad(option) {
     let res = await pics.get();
     let plist = res.data
@@ -14,13 +17,38 @@ Page({
 
     plist.forEach(v => {
       // 为plist的数据加上一个count来记录票数
-      v.count = 0
+      v.count = 0,
+      v.border = false,
       // 判断点击的图片是哪一张为其的count加一
       vlist.forEach(vv => {
         if (vv.fileid == v.fileid) {
-          v.count += 1
+          v.count += 1;
+          v.border = true
         }
       })
+    })
+
+    // 调用云函数login
+    res = await wx.cloud.callFunction({
+      name: 'login'
+    })
+    console.log('login', res);
+    let openid = res.result.openid
+    let voted = false
+    let votesum = 0
+    let today = new Date()
+    today = today.toJSON().slice(0,10)
+    console.log(today);
+    // 将云函数返回的_openid跟votes集合的openid匹配，如果投过票就放回true
+    vlist.forEach(v => {
+      if (v._openid == openid && v.data.toJSON().slice(0,10) == today) {
+        votesum += 1
+      }
+      console.log(votesum);
+    })
+    this.setData({
+      voted,
+      votesum
     })
 
     this.setData({
@@ -123,6 +151,17 @@ Page({
   },
   async tap(e) {
     console.log(e);
+    // 如果voted的值是true就显示“已投过票不能再投”后终止向下继续执行
+    if (this.data.votesum >= 3) {
+      wx.showToast({
+        title: '超过投票次数',
+      })
+      return
+    }else{
+      wx.showToast({
+        title: '还有'+ (Number(this.data.maxvote) - Number(this.data.votesum) - 1) +'次投票机会',
+      })
+    }
     let fileid = e.currentTarget.dataset.id;
     let res = await votes.add({
       data: {
