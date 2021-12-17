@@ -6,26 +6,25 @@ const pics = db.collection('pics');
 const votes = db.collection('votes');
 const $ = db.command.aggregate
 Page({
-  data:{
-    maxvote:3,
+  data: {
+    maxvote: 3,
   },
   async onLoad(option) {
     let res = await pics.get();
     let plist = res.data
     res = await votes.get()
     let vlist = res.data
-
     plist.forEach(v => {
       // 为plist的数据加上一个count来记录票数
       v.count = 0,
       v.border = false,
-      // 判断点击的图片是哪一张为其的count加一
-      vlist.forEach(vv => {
-        if (vv.fileid == v.fileid) {
-          v.count += 1;
-          v.border = true
-        }
-      })
+        // 判断点击的图片是哪一张为其的count加一
+        vlist.forEach(vv => {
+            if (vv.fileid == v.fileid) {
+              v.count += 1;
+              v.border = true
+            }
+        })
     })
 
     // 调用云函数login
@@ -37,18 +36,20 @@ Page({
     let voted = false
     let votesum = 0
     let today = new Date()
-    today = today.toJSON().slice(0,10)
+    today = today.toJSON().slice(0, 10)
     console.log(today);
     // 将云函数返回的_openid跟votes集合的openid匹配，如果投过票就放回true
     vlist.forEach(v => {
-      if (v._openid == openid && v.data.toJSON().slice(0,10) == today) {
+      if (v._openid == openid && v.data.toJSON().slice(0, 10) == today) {
         votesum += 1
       }
       console.log(votesum);
+
+
     })
     this.setData({
       voted,
-      votesum
+      votesum,
     })
 
     this.setData({
@@ -152,14 +153,15 @@ Page({
   async tap(e) {
     console.log(e);
     // 如果voted的值是true就显示“已投过票不能再投”后终止向下继续执行
+
     if (this.data.votesum >= 3) {
       wx.showToast({
         title: '超过投票次数',
       })
       return
-    }else{
+    } else {
       wx.showToast({
-        title: '还有'+ (Number(this.data.maxvote) - Number(this.data.votesum) - 1) +'次投票机会',
+        title: '还有' + (Number(this.data.maxvote) - Number(this.data.votesum) - 1) + '次投票机会',
       })
     }
     let fileid = e.currentTarget.dataset.id;
@@ -188,7 +190,7 @@ Page({
   setTitleBar(current) {
     // 设置小程序标题为某一张多少票
     wx.setNavigationBarTitle({
-      title: current + 1 + '/' + this.data.plist.length + '  ' + this.data.plist[current].count + '票'
+      title: current + 1 + '/' + this.data.plist.length + '  还剩' + (this.data.maxvote - this.data.votesum) + '票'
     })
   },
   change(e) {

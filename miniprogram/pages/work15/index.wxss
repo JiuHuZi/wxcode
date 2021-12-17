@@ -9,5 +9,5 @@ image{
   box-sizing: border-box;
 }
 .border{
-  border:20px solid #000
+  border:20px solid lightskyblue
 }
