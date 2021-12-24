@@ -14,7 +14,7 @@ Page({
     let plist = res.data
     res = await votes.get()
     let vlist = res.data
-    
+
 
     // 调用云函数login
     res = await wx.cloud.callFunction({
@@ -29,7 +29,7 @@ Page({
     console.log(today);
     // 将云函数返回的_openid跟votes集合的openid匹配，如果投过票就放回true
     vlist.forEach(v => {
-      if (v._openid == openid && v.data.toJSON().slice(0, 10) == today) {
+      if (v._openid == openid && v.date.toJSON().slice(0, 10) == today) {
         votesum += 1
       }
       console.log(votesum);
@@ -39,13 +39,13 @@ Page({
     plist.forEach(v => {
       // 为plist的数据加上一个count来记录票数
       v.count = 0,
-      v.border = false,
+        v.border = false,
         // 判断点击的图片是哪一张为其的count加一
         vlist.forEach(vv => {
-            if (vv.fileid == v.fileid) {
-              v.count += 1;
-              v.border = true
-            }
+          if (vv.fileid == v.fileid) {
+            v.count += 1;
+            v.border = true
+          }
         })
     })
     this.setData({
@@ -168,7 +168,7 @@ Page({
     let res = await votes.add({
       data: {
         fileid,
-        data: db.serverDate()
+        date: db.serverDate()
       }
     })
     console.log(res);
