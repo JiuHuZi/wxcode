@@ -1,0 +1,6 @@
+<view>学号：{{user.sn}} 姓名：{{user.name}} 成绩：{{user.score}}</view>
+<view wx:for="{{directions}}" wx:key="this">
+  <picker data-id="{{index}}" mode="selector" range='{{directions}}' bindchange="change">
+    第{{index + 1}}志愿：{{user.choosen[index]}}
+  </picker>
+</view>
