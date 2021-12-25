@@ -1,0 +1,9 @@
+<button bindtap="getuserProfile" type="primary">获取微信账号信息</button>
+<form action="" bindsubmit="formsubmit">
+  <input type="text" name="nickName" plaeholder="微信昵称" value="{{nickName}}"/>
+  <image class="avatar" name="avatarUrl" src="{{avatarUrl}}"/>
+  <view>请输入您的8位学号和姓名</view>
+  <input type="text" name="sn" placeholder="8位学号" />
+  <input type="text" name="name" placeholder="姓名" />
+  <button type="primary" form-type="submit">绑定微信账号</button>
+</form>

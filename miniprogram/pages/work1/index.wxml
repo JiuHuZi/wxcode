@@ -36,6 +36,8 @@
       class="end iconfont icon-jiantou1"></i></navigator>
   <navigator class="com test" url="/pages/work16/index"><i class=" icon-xitongrizhi iconfont"></i><span>work16 图片投票</span><i
       class="end iconfont icon-jiantou1"></i></navigator>
+  <navigator class="com test" url="/pages/work18/index"><i class=" icon-xitongrizhi iconfont"></i><span>work18 选专业方向小程序</span><i
+      class="end iconfont icon-jiantou1"></i></navigator>
   <navigator class="com test" url="/pages/test/test"><i class=" icon-xitongrizhi iconfont"></i><span>test 测试文件</span><i
       class="end iconfont icon-jiantou1"></i></navigator>
 </view>
