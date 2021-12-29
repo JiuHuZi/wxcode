@@ -1,2 +1,27 @@
-<!--pages/work18/list.wxml-->
-<text>pages/work18/list.wxml</text>
+<!-- 标签页标题 -->
+<view class="tab">
+    <block wx:for="{{directions}}" wx:key="this">
+        <view class="tab-item {{item==index?'active':''}}" bindtap="changeItem" data-item="{{index}}">
+            {{item}}{{list[index].length}} / {{nums[index]}}
+        </view>
+    </block>
+</view>
+<!-- 学生列表 -->
+<view class="content">
+    <swiper circular="true" current="{{tab}}" bindchange="changeTab">
+        <swiper-item wx:for="{{list}}" wx:key="this">
+            <scroll-view scroll-y="true" class="list" enhanced="true" showScrollbar="true">
+                <view class="{{student.name==user.name?'self':'good'}}" wx:for="item" wx:key="this" wx:for-item="student">
+                    {{student.rank}}-{{student.name}}--{{student.score}}
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>
+
+<view class="footer">
+    <view>
+        姓名：{{user.name}}  成绩：{{user.score}}  方向：{{result}}
+    </view>
+    <button type="primary" bindtap="rank">重选方向</button>
+</view>
