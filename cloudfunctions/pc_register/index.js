@@ -47,7 +47,8 @@ exports.main = async (event, context) => {
       user = {
         ...student,
         nickName,
-        avatarUrl
+        avatarUrl,
+        openid
       }
     } else {
       reg = 'err'

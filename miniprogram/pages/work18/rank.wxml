@@ -4,3 +4,4 @@
     第{{index + 1}}志愿：{{user.choosen[index]}}
   </picker>
 </view>
+<button type="primary" bindtap="post">选择志愿</button>

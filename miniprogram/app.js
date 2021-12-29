@@ -1,6 +1,6 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: async function () {
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -11,10 +11,32 @@ App({
         //   如不填则使用默认环境（第一个创建的环境）
         // env: 'my-env-id',
         traceUser: true,
-        env:'cloud1-7g245pll714f761e'
+        env: 'cloud1-7g245pll714f761e'
       })
     }
 
     this.globalData = {}
+
+    let res = await wx.cloud.callFunction({
+      name: 'pc_login'
+    })
+    console.log(res);
+    this.globalData.user = res.result.result
+
+    if (res.result.result.name == 'nobody') {
+      wx.navigateTo({
+        url: '/pages/work18/index',
+      })
+    } else {
+      if (res.result.result.choosen?.length > 0){
+        wx.navigateTo({
+          url: '/pages/work18/list',
+        })
+      }else{
+        wx.navigateTo({
+          url: '/pages/work18/rank',
+        })
+      }
+    }
   }
 })

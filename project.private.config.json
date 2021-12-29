@@ -19,20 +19,14 @@
           "query": ""
         },
         {
-          "name": "pages/work15/index",
-          "pathName": "pages/work15/index",
+          "name": "pages/work18/index",
+          "pathName": "pages/work18/index",
           "query": "",
           "scene": null
         },
         {
           "name": "pages/work18/rank",
           "pathName": "pages/work18/rank",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/work18/index",
-          "pathName": "pages/work18/index",
           "query": "",
           "scene": null
         }
