@@ -46,9 +46,29 @@ Page({
       user
     })
   },
-  post(){
-    wx.redirectTo({
-      url: '/pages/work18/list',
+  async post(){
+    let res = await wx.cloud.callFunction({
+      name:'pc_post',
+      data:{
+        user:this.data.user
+      }
     })
+    console.log(res);
+
+    if(res.result.res.errMsg.indexOf('ok')> -1){
+      await wx.showToast({
+        title: '提交成功',
+        duration:3000
+      })
+      wx.redirectTo({
+        url: '/pages/work18/list',
+      })
+    }else{
+      wx.showToast({
+        title: '提交失败',
+        icon:'error'
+      })
+    }
+
   }
 })
