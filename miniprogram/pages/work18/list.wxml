@@ -1,27 +1,25 @@
 <!-- 标签页标题 -->
 <view class="tab">
-    <block wx:for="{{directions}}" wx:key="this">
-        <view class="tab-item {{item==index?'active':''}}" bindtap="changeItem" data-item="{{index}}">
-            {{item}}{{list[index].length}} / {{nums[index]}}
-        </view>
-    </block>
+    <view class="tab-item {{item==index?'active':''}}" bindtap="changeItem" data-item="{{index}}"
+        wx:for="{{directions}}" wx:key="this">
+        {{item}}{{list[index].length}} / {{nums[index]}}
+    </view>
 </view>
 <!-- 学生列表 -->
 <view class="content">
     <swiper circular="true" current="{{tab}}" bindchange="changeTab">
         <swiper-item wx:for="{{list}}" wx:key="this">
-            <scroll-view scroll-y="true" class="list" enhanced="true" showScrollbar="true">
-                <view class="{{student.name==user.name?'self':'good'}}" wx:for="item" wx:key="this" wx:for-item="student">
-                    {{student.rank}}-{{student.name}}--{{student.score}}
-                </view>
+            <scroll-view scroll-y="true" class="list" enhanced="true" showScrollbar="true" wx:for="{{item}}"
+                wx:key="this" wx:for-item="student">
+                {{student.rank}}-{{student.name}}--{{student.score}}
             </scroll-view>
         </swiper-item>
     </swiper>
 </view>
-
+<!-- 底栏 -->
 <view class="footer">
     <view>
-        姓名：{{user.name}}  成绩：{{user.score}}  方向：{{result}}
+        姓名：{{user.name}} 成绩：{{user.score}} 方向：{{result}}
     </view>
     <button type="primary" bindtap="rank">重选方向</button>
 </view>

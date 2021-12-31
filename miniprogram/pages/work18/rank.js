@@ -45,5 +45,10 @@ Page({
     this.setData({
       user
     })
+  },
+  post(){
+    wx.redirectTo({
+      url: '/pages/work18/list',
+    })
   }
 })

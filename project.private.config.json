@@ -29,6 +29,12 @@
           "pathName": "pages/work18/rank",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/work18/list",
+          "pathName": "pages/work18/list",
+          "query": "",
+          "scene": null
         }
       ]
     }
