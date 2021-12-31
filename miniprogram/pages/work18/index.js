@@ -74,5 +74,23 @@ Page({
         content: res.result.errMsg
       })
     }
+  },
+  async onLoad() {
+    let res = await wx.cloud.callFunction({
+      name: 'pc_login'
+    })
+    console.log(res);
+    app.globalData.user = res.result.result
+    if (res.result.result.name != 'nobody') {
+      if (res.result.result.choosen?.length > 0) {
+        wx.navigateTo({
+          url: '/pages/work18/list',
+        })
+      } else {
+        wx.navigateTo({
+          url: '/pages/work18/rank',
+        })
+      }
+    }
   }
 })
