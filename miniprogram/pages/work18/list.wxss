@@ -1,1 +1,53 @@
 /* pages/work18/list.wxss */
+page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+.tab {
+    display: flex;
+    /* position: fixed;
+    width: 100vw; */
+}
+
+.tab-item {
+    flex: 1;
+    font-size: 10pt;
+    text-align: center;
+    line-height: 72rpx;
+    border-bottom: 6rpx solid #eee;
+}
+
+
+.content {
+    flex: 1;
+}
+
+.content>swiper {
+    height: 100%;
+}
+.outscroll{
+    height: 100%;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #252525;
+    height: 112rpx;
+    flex-direction: column;
+}
+.footer>view{
+    font-size: 14px;
+}
+.footer>button{
+    width: 100%;
+}
+.active{
+    color: #c25b5b;
+    border-bottom-color: #c25b5b;
+}
+.list{
+    background-color: green;
+}
